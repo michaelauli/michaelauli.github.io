@@ -1,0 +1,76 @@
+---
+layout: default
+title: Michael Auli
+picture: headshot_oct_2013
+news:
+  -
+    >
+      I joined <a href="http://research.facebook.com/ai">Facebook AI Research</a>.
+  -
+    >
+      I gave a <a href="talks/facebook-rnn-translate.pdf">talk</a> on neural network-based machine translation at the University of Washington.  
+---
+<div class="page-header">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Michael Auli</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <address>
+        Research Scientist<br/>
+        <a href="http://research.facebook.com/ai">Facebook AI Research</a><br/>
+        Menlo Park, CA<br/>
+        <span class="glyphicon glyphicon-envelope"/> first.last@gmail.com<br/>
+<a href="http://www.linkedin.com/in/michaelauli" style="text-decoration:none;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="LinkedIn" style="vertical-align:middle;" border="0">&nbsp;LinkedIn profile</a>
+      </address>
+    </div>
+  </div>
+</div>
+
+<p>
+  I am a Research Scientist at 
+  <a href="http://research.facebook.com/ai">Facebook AI Research</a> since 2015. 
+  Previously, I was a postdoc at Microsoft Research in Redmond working on improving 
+  translation quality using 
+  <a href="http://en.wikipedia.org/wiki/Deep_learning">deep learning</a>. 
+  I earned my Ph.D. at the University of Edinburgh for my work on syntactic 
+  parsing with approximate inference which led to the 
+  <a href="papers/softmax-ccg.pdf">best reported results</a> on 
+  CCGbank. 
+</p>
+
+<h4>News</h4>
+<ul>
+{% for item in page.news %}
+  <li>{{ item }}</li>
+{% endfor %}
+</ul>
+</br>
+
+<h4>Papers</h4>
+{% for post in site.papers %}
+  {% if post.selected %}
+    {% include paper.html paper=post %}
+  {% endif %}
+{% endfor %}
+
+</br>
+<h4>Talks</h4>
+{% for talk in site.talks %}
+<div class="media">
+  <a class="pull-left thumbnail" {%if talk.url %} href="{{ talk.url }}" {% endif %}>
+    <img class="media-object" src="img/talk/{{ talk.img }}" alt="">
+  </a>
+  <div class="media-body">
+    <strong>{{ talk.title }}</strong><br/>
+    {{ talk.detail }}
+    {% if talk.video %}<br/>
+      <a href="{{ talk.video }}"><span class="glyphicon glyphicon-film"></span></a> Video
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+

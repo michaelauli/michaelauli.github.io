@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MathJax -->
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Start of StatCounter Code -->
+    <script type="text/javascript">
+    var sc_project=6630774; 
+    var sc_invisible=1; 
+    var sc_security="71bb070c"; 
+    </script>
+
+    <script type="text/javascript"
+    src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+    class="statcounter"><a title="tumblr statistics"
+    href="http://statcounter.com/tumblr/" target="_blank"><img
+    class="statcounter"
+    src="http://c.statcounter.com/6630774/0/71bb070c/1/"
+    alt="tumblr statistics" ></a></div></noscript>
+    <!-- End of StatCounter Code -->
+
+    <script src="scripts/gatag.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21832871-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </head>
+  <body>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          {% include nav-bar.html %}
+        </div>
+        <div class="col-sm-10">
+          {{ content }}
+        </div>
+      </div>
+      <footer class="text-center text-muted">
+        <hr/>
+        Last updated {{ site.time | date: "%B %d, %Y" }}.<br/>
+        <br/><br/>
+      </footer>
+    </div>
+  </body>
+</html>
+

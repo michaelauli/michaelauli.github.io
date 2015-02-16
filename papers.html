@@ -1,0 +1,35 @@
+---
+layout: default
+title: Michael Auli | Papers &amp; Talks
+picture: headshot_oct_2013
+---
+<div class="page-header">
+  <h3>Papers and Talks</h3>
+</div>
+
+<h4>Papers</h4>
+{% for post in site.papers %}
+  {% include paper.html paper=post %}
+{% endfor %}
+
+<h4>Talks</h4>
+<p>
+Feel free to use my talk slides as you like but please acknowledge so if you do.
+</p>
+
+{% for talk in site.talks %}
+<div class="media">
+  <a class="pull-left thumbnail" {%if talk.url %} href="{{ talk.url }}" {% endif %}>
+    <img class="media-object" src="img/talk/{{ talk.img }}" alt="">
+  </a>
+  <div class="media-body">
+    <strong>{{ talk.title }}</strong><br/>
+    {{ talk.detail }}
+    {% if talk.video %}<br/>
+      <a href="{{ talk.video }}"><span class="glyphicon glyphicon-film"></span></a> Video
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+
+

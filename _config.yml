@@ -1,0 +1,261 @@
+exclude: ['README.md']
+timezone: US/Pacific
+talks:
+  -
+    title: Learning to translate with neural networks
+    detail: Talk at Facebook, Google, Amazon and the University of Washington, 2014.
+    url: "talks/facebook-rnn-translate.pdf"
+    img: "facebook-rnn-translate.jpg"
+  -
+    title: Integrated Parsing and Tagging
+    detail: Talk at Carnegie Mellon University, Johns Hopkins University, BBN Technologies, IBM Research and Microsoft Research, 2011.
+    url: "talks/parsing-tagging-talk.pdf"
+    img: "parsing-tagging-talk.jpg"
+papers:
+  - 
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2014
+    authors: Michael Auli and Michel Galley and Jianfeng Gao
+    title: Large Scale Expected BLEU Training of Phrase-based Reordering Models
+    doc-url: papers/expbleu-reorder.pdf
+    img: expbleu-reorder
+    booktitle: Proceedings of EMNLP
+    booktitle-url: http://emnlp2014.org/
+    venue: conference
+    abstract: >
+      Recent work by Cherry (2013) has shown that directly
+      optimizing phrase-based reordering models towards BLEU
+      can lead to significant gains. Their approach is limited
+      to small training sets of a few thousand sentences and
+      a similar number of sparse features. We show how the
+      expected BLEU objective allows us to train a simple
+      linear discriminative reordering model with millions
+      of sparse features on hundreds of thousands of sentences,
+      each of which results in significant improvements.
+      A comparison to likelihood training demonstrates that
+      expected BLEU is vastly more effective. Our best results
+      improve a hierarchical lexicalized reordering baseline
+      by up to 2.0 BLEU in a single-reference setting on a
+      French-English WMT 2012 setup.
+  - 
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2014
+    authors: Michael Auli and Jianfeng Gao
+    title: Decoder Integration and Expected BLEU Training for Recurrent Neural Network Language Models
+    doc-url: papers/expbleu-rnn.pdf
+    img: expbleu-rnn
+    booktitle: Proceedings of ACL
+    booktitle-url: http://acl2014.org
+    venue: conference
+    abstract: >
+      Neural network language models are often trained by optimizing likelihood, but
+      we would prefer to optimize for a task specific metric, such as BLEU for machine
+      translation.
+      We show how a recurrent neural network language model can be optimized towards
+      an expected BLEU loss instead of the usual cross-entropy criterion.
+      Furthermore, we tackle the issue of directly integrating a recurrent
+      network into first-pass decoding under an efficient approximation.
+      Our best results improve a phrase-based statistical machine translation
+      system trained on WMT 2012 French-English data by up to 2.0 BLEU, and the
+      expected BLEU objective improves over a cross-entropy trained model by up to
+      0.6 BLEU in a single reference setup.
+  - 
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2014
+    authors: Yuening Hu and Michael Auli and Qin Gao and Jianfeng Gao
+    title: Minimum Translation Modeling with Recurrent Neural Networks
+    doc-url: papers/mtu-rnn.pdf
+    img: mtu-rnn
+    booktitle: Proceedings of EACL
+    booktitle-url: http://eacl2014.org
+    venue: conference
+    abstract: >
+      We introduce recurrent neural network-based Minimum Translation Unit (MTU)
+      models which make predictions based on an unbounded history of previous
+      bilingual contexts.
+      Traditional back-off n-gram models suffer under the sparse nature of MTUs which
+      makes estimation of high-order sequence models challenging.
+      We tackle the sparsity problem by modeling MTUs both as bags-of-words and as
+      a sequence of individual source and target words.
+      Our best results improve the output of a phrase-based statistical machine
+      translation system trained on WMT 2012 French-English data by up to 1.5 BLEU,
+      and we outperform the traditional n-gram based MTU approach by up to 0.8 BLEU.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2013
+    authors: Michael Auli and Michel Galley and Chris Quirk and Geoffrey Zweig
+    title: Joint Language and Translation Modeling with Recurrent Neural Networks
+    doc-url: papers/rnn-joint-lm-tm.pdf
+    img: rnn-joint-lm-tm
+    booktitle: Proceedings of EMNLP
+    booktitle-url: http://hum.csse.unimelb.edu.au/emnlp2013
+    venue: conference
+    abstract: >
+      We present a joint language and translation model based on a
+      recurrent neural network which predicts target words based on
+      an unbounded history of both source and target words. The weaker
+      independence asssumptions of this model result in a vastly larger
+      search space compared to related feed forward-based language or
+      translation models. We tackle this issue with a new lattice rescoring
+      algorithm and demonstrate its effectiveness empirically. Our joint
+      model builds on a well known recurrent neural network language model
+      (Mikolov, 2012) augmented by a layer of additional inputs from the
+      source language. We show competitive accuracy compared to the
+      traditional channel model features. Our best results improve the output
+      of a system trained on WMT 2012 French-English data by up to 1.5 BLEU,
+      and by 1.1 BLEU on average across several test sets.
+  - 
+    layout: paper
+    paper-type: phd-thesis 
+    selected: y
+    year: 2012
+    title: Integrated Supertagging and Parsing
+    institution: University of Edinburgh
+    doc-url: papers/michael.auli.thesis.pdf
+    img: thesis2012
+    abstract: >
+      <p>Parsing is the task of assigning syntactic or semantic structure to a natural language sentence. This thesis focuses on syntactic parsing with Combinatory Categorial Grammar (CCG; Steedman 2000). CCG allows incremental processing, which is essential for speech recognition and some machine translation models, and it can build semantic structure in tandem with syntactic parsing. Supertagging solves a subset of the parsing task by assigning lexical types to words in a sentence using a sequence model. It has emerged as a way to improve the efficiency of full CCG parsing (Clark and Curran, 2007) by reducing the parser's search space. This has been very successful and it is the central theme of this thesis.
+                         
+      <p>We begin by an analysis of how efficiency is being traded for accuracy in supertagging. Pruning the search space by supertagging is inherently approximate and to contrast this we include A* in our analysis, a classic exact search technique.Interestingly, we find that combining the two methods improves efficiency but we also demonstrate that excessive pruning by a supertagger significantly lowers the upper bound on accuracy of a CCG parser.
+            
+      <p>Inspired by this analysis, we design a single integrated model with both supertagging and parsing features, rather than separating them into distinctmodels chained together in a pipeline. To overcome the resulting complexity, we experiment with both loopy belief propagation and dual decomposition approaches to inference, the first empirical comparison of these algorithms that we are aware of on a structured natural language processing problem.
+            
+      <p>Finally, we address training the integrated model. We adopt the idea of optimising directly for a task-specific metric such as is common in other areas like statistical machine translation. We demonstrate how a novel dynamic programming algorithm enables us to optimise for F-measure, our task-specific evaluation metric, and experiment with approximations, which prove to be excellent substitutions.
+            
+      <p>Each of the presented methods improves over the state-of-the-art in CCG parsing. Moreover, the improvements are additive, achieving a labelled/unlabelled dependency F-measure on CCGbank of 89.3%/94.0% with gold part-of-speech tags, and 87.2%/92.8% with automatic part-of-speech tags, the best reported results for this task to date. Our techniques are general and we expect them to apply to other parsing problems, including lexicalised tree adjoining grammar and context-free grammar parsing.
+  -  
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2011
+    authors: Michael Auli and Adam Lopez
+    title: Training a Log-Linear Parser with Loss Functions via Softmax-Margin
+    doc-url: papers/softmax-ccg.pdf
+    img: softmax-ccg
+    booktitle: Proceedings of EMNLP
+    booktitle-url: http://conferences.inf.ed.ac.uk/emnlp2011/
+    venue: conference
+    abstract: >
+      Log-linear parsing models are often trained by optimizing 
+      likelihood, but we would prefer to optimize for a task-specific metric like F-measure.
+      Softmax-margin is a convex objective for such models that minimizes a bound on 
+      expected risk for a given loss function, but its naïve application requires the loss 
+      to decompose over the predicted structure, which is not true of F-measure.
+      We use softmax-margin to optimize a log-linear CCG parser for a variety of loss functions, and
+      demonstrate a novel dynamic programming algorithm that enables us to use it with
+      F-measure, leading to substantial gains in accuracy on CCGBank.  When we embed our
+      loss-trained parser into a larger model that includes supertagging features
+      incorporated via belief propagation, we obtain further improvements and achieve 
+      a labelled/unlabelled dependency 
+      F-measure of 89.3%/94.0% on gold part-of-speech tags,
+      and 87.2%/92.8% on automatic part-of-speech
+      tags, the best reported results for this task.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2011
+    authors: Michael Auli and Adam Lopez
+    title: A Comparison of Loopy Belief Propagation and Dual Decomposition for Integrated CCG Supertagging and Parsing
+    doc-url: papers/lbp-vs-dd.pdf
+    img: lbp-vs-dd
+    booktitle: Proceedings of ACL 
+    booktitle-url: http://www.acl2011.org/
+    venue: conference
+    abstract: >
+      Via an oracle experiment, we show that the upper bound on accuracy of a CCG 
+      parser is significantly lowered when its search space is pruned using a 
+      supertagger, though the supertagger also prunes many bad parses.  Inspired by 
+      this analysis, we design a single model with both supertagging and parsing 
+      features, rather than separating them into distinct models chained together 
+      in a pipeline.  To overcome the resulting increase in complexity, we 
+      experiment with both belief propagation and dual decomposition approaches to 
+      inference, the first empirical comparison of these algorithms that we are 
+      aware of on a structured natural language processing problem.  On CCGbank we 
+      achieve a labelled dependency F-measure of 88.8% on gold POS tags, and 
+      86.7% on automatic part-of-speech tags, the best reported results for this 
+      task.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2011
+    authors: Michael Auli and Adam Lopez
+    title: Efficient CCG Parsing&#58; A* versus Adaptive Supertagging
+    doc-url: papers/astar-ccg.pdf
+    img: astar-ccg
+    booktitle: Proceedings of ACL 
+    booktitle-url: http://www.acl2011.org/
+    venue: conference
+    abstract: >
+      We present a systematic comparison and combination of two orthogonal techniques for efficient 
+      parsing of Combinatory Categorial Grammar (CCG).  First we consider adaptive supertagging, a 
+      widely used approximate search technique that prunes most lexical categories from the parser's 
+      search space using a separate sequence model.  Next we consider several variants on A*, a 
+      classic exact search technique which to our knowledge has not been applied to more expressive 
+      grammar formalisms like CCG.  In addition to standard hardware-independent measures of parser 
+      effort we also present what we believe is the first evaluation of A* parsing on the more 
+      realistic but more stringent metric of CPU time.  By itself, A* substantially reduces parser 
+      effort as measured by the number of edges considered during parsing, but we show that for CCG 
+      this does not always correspond to improvements in CPU time over a CKY baseline.  Combining A* 
+      with adaptive supertagging decreases CPU time by 15% for our best model.
+  -
+    layout: paper
+    paper-type: firstyearreport
+    selected: y
+    year: 2009
+    institution: University of Edinburgh
+    title: CCG-based Models for Statistical Machine Translation
+    doc-url: papers/first-year-report.pdf
+    img: first-year-report
+    abstract: >
+      <p>The arguably best performing statistical machine translation systems are based
+      on context-free formalisms or weakly equivalent ones. These models usually use
+      a synchronous version of a context-free grammar (SCFG) which we argue is too
+      rigid for the highly ambiguous task of human language translation. This is
+      exacerbated by the fact that the imperfect methods available for aligning
+      parallel texts make extracting an efficient grammar very hard. As a result,
+      the context-free grammars extracted are usually very large in size after
+      having already been restricted through a variety of constraints.
+
+      <p>We propose to use Combinatorial Categorial Grammar (CCG) for machine translation
+      models. CCG is a lexicalized, mildly-context-sensitive formalism which
+      is very well suited to capture long-distance dependencies that are not
+      addressed very well by most current models. We believe that CCG is very well
+      suited for the task of machine translation due to its ability to represent
+      non-constituents in a syntactic way which frequently occur in parallel texts
+      as well as its high derivational flexibility. This allows us to use some of
+      the advantages of non-syntactic phrase-based approaches within a syntactic
+      framework such as a relatively small grammar size compared to 
+      context-free-based machine translation grammars.
+
+      <p>A number of models leveraging the advantages of CCG are possible, however, our
+      principal goal is to develop a string-to-tree based model which projects CCG
+      on the target side of a synchronous grammar. We intend to apply the vast
+      progress made in monolingual CCG parsing to machine translation. Additionally,
+      we propose to extend CCG to a synchronous grammar (SCCG) as it has been done
+      for other related formalisms such as tree adjoining grammars. We hope that a
+      SCCG may provide similar derivational flexibility to monolingual CCG which may
+      result in a better model for translational equivalence.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2009
+    authors: Michael Auli, Adam Lopez, Hieu Hoang, and Philipp Koehn
+    title: A Systematic Analysis of Translation Model Search Spaces
+    doc-url: http://www.aclweb.org/anthology/W/W09/W09-0437.pdf
+    booktitle: Proceedings of the Fourth Workshop on Statistical Machine Translation 
+    booktitle-url: http://www.statmt.org/wmt09/
+    img: wmt2009
+    venue: workshop
+    abstract: >
+      Translation systems are complex, and most metrics do little to pinpoint causes of error or isolate system differences.  We use a simple technique to discover induction errors, which occur when good translations are absent from model search spaces.  Our results show that a common pruning heuristic drastically increases induction error, and also strongly suggest that the search spaces of phrase-based and hierarchical phrase-based models are highly overlapping despite the well known structural differences.
