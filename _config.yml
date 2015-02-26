@@ -16,6 +16,60 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
+    year: 2015
+    authors: Kai Zhao and Hany Hassan and Michael Auli
+    title: Learning Translation Models from Monolingual Continuous Representations
+    doc-url: 
+    img: inpress
+    booktitle: Proceedings of NAACL
+    booktitle-url: http://naacl.org/naacl-hlt-2015
+    venue: conference
+    abstract: >
+      The availability of parallel corpora limits the further success 
+      of statistical machine translation since infrequent phrases lack 
+      appropriate translation rules.
+      Existing approaches that leverages the huge monolingual corpora 
+      usually need specially designed statistics for phrases, which 
+      take a long time to calculate. 
+      We propose a simple and fast translation model learning method 
+      that directly hallucinates translation rules for infrequent 
+      phrases from their semantically similar neighbors, using 
+      continuous phrasal representations based on widely available 
+      word vectors. 
+      We also investigate approximated nearest neighbors query for to 
+      further speed up the search for semantically similar neighbors 
+      in the continuous representation space. 
+      Experiments show that our method can improve up to 1.5 BLEU 
+      points by adding translation rules for infrequent phrases. 
+      Compared to existing methods, our approach generates better 
+      translation rules, and is faster.
+  - 
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2015
+    authors: Alessandro Sordoni and Michel Galley and Michael Auli and Chris Brockett and Yangfeng Ji and Meg Mitchell and Jianfeng Gao and Bill Dolan and Jian-Yun Nie
+    title: A Neural Network Approach to Context-Sensitive Generation of Conversational Responses
+    doc-url: 
+    img: inpress
+    booktitle: Proceedings of NAACL
+    booktitle-url: http://naacl.org/naacl-hlt-2015
+    venue: conference
+    abstract: >
+      We present a novel response generation system that can be 
+      trained from end to end on large quantities of unstructured 
+      Twitter conversations. 
+      A neural network architecture is used to address sparsity issues 
+      that arise when integrating context information into classical
+      statistical models, allowing the system to take into account 
+      previous dialog utterances. 
+      Our dynamic-context generative models show consistent gains over 
+      both context-sensitive and non-context-sensitive Machine Translation 
+      and Information Retrieval baselines.
+  - 
+    layout: paper
+    paper-type: inproceedings
+    selected: y
     year: 2014
     authors: Michael Auli and Michel Galley and Jianfeng Gao
     title: Large Scale Expected BLEU Training of Phrase-based Reordering Models
