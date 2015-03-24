@@ -19,8 +19,8 @@ papers:
     year: 2015
     authors: Kai Zhao and Hany Hassan and Michael Auli
     title: Learning Translation Models from Monolingual Continuous Representations
-    doc-url: 
-    img: inpress
+    doc-url: papers/dist_phrase_learn.pdf
+    img: dist_phrase_learn
     booktitle: Proceedings of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2015
     venue: conference
