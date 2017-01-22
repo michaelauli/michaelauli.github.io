@@ -17,6 +17,150 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2016
+    authors: Yann N. Dauphin, Angela Fan, Michael Auli and David Grangier
+    title: Language Modeling with Gated Convolutional Networks
+    doc-url: papers/gcnn.pdf
+    img: gcnn
+    booktitle: arXiv:1612.08083
+    booktitle-url:
+    venue: conference
+    abstract: >
+      The pre-dominant approach to language modeling to date
+      is based on recurrent neural networks.
+      In this paper we present a convolutional approach
+      to language modeling. We introduce a novel
+      gating mechanism that eases gradient propagation
+      and which performs better than the LSTM-style
+      gating of Oord et al. (2016b) despite being
+      simpler. We achieve a new state of the art on
+      WikiText-103 as well as a new best single-GPU
+      result on the Google Billion Word benchmark.
+      In settings where latency is important, our model
+      achieves an order of magnitude speed-up compared
+      to a recurrent baseline since computation
+      can be parallelized over time. To our knowledge,
+      this is the first time a non-recurrent approach outperforms
+      strong recurrent models on these tasks.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2016
+    authors: Jonas Gehring, Michael Auli, David Grangier, Yann N. Dauphin
+    title: A Convolutional Encoder Model for Neural Machine Translation
+    doc-url: papers/convenc.pdf
+    img: convenc
+    booktitle: arXiv:1611.02344
+    booktitle-url:
+    venue: conference
+    abstract: >
+      The prevalent approach to neural machine translation
+      relies on bi-directional LSTMs to encode the source sentence.
+      In this paper we present a faster and conceptually simpler
+      architecture based on a succession of convolutional layers.
+      This allows to encode the entire source sentence simultaneously
+      compared to recurrent networks for which computation is
+      constrained by temporal dependencies.
+      We achieve a new state-of-the-art on WMT'16 English-Romanian
+      translation and outperform several recently published
+      results on the WMT'15 English-German task.
+      We also achieve almost the same accuracy as a very deep LSTM setup
+      on WMT'14 English-French translation.
+      Our convolutional encoder speeds up CPU decoding by more than
+      two times at the same or higher accuracy as a strong
+      bi-directional LSTM baseline.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2016
+    authors: Roman Novak, Michael Auli, David Grangier
+    title: Iterative Refinement for Machine Translation
+    doc-url: papers/refine.pdf
+    img: refine
+    booktitle: arXiv:1610.06602
+    booktitle-url:
+    venue: conference
+    abstract: >
+      Existing machine translation decoding algorithms generate
+      translations in a strictly monotonic fashion and never revisit
+      previous decisions.
+      As a result, earlier mistakes cannot be corrected at a later stage.
+      In this paper, we present a translation scheme that starts
+      from an initial guess and then makes iterative improvements
+      that may revisit previous decisions.
+      We parameterize our model as a convolutional neural network
+      that predicts discrete substitutions to an existing translation
+      based on an attention mechanism over both the source sentence
+      as well as the current translation output.
+      By making less than one modification per sentence,
+      we improve the output of a phrase-based translation system
+      by up to 0.4 BLEU on WMT15 German-English translation.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2016
+    authors: Gurvan L'Hostis, David Grangier, Michael Auli
+    title: Vocabulary Selection Strategies for Neural Machine Translation
+    doc-url: papers/vocabsel.pdf
+    img: vocabsel
+    booktitle: arXiv:1610.00072
+    booktitle-url:
+    venue: conference
+    abstract: >
+      Classical translation models constrain the space of possible outputs
+      by selecting a subset of translation rules based on the input sentence.
+      Recent work on improving the efficiency of neural translation models
+      adopted a similar strategy by restricting the output vocabulary
+      to a subset of likely candidates given the source.
+      In this paper we experiment with context and embedding-based
+      selection methods and extend previous work by examining speed and
+      accuracy trade-offs in more detail.
+      We show that decoding time on CPUs can be reduced by up to 90% and
+      training time by 25% on the WMT15 English-German and
+      WMT16 English-Romanian tasks at the same or only negligible
+      change in accuracy.
+      This brings the time to decode with a state of the art
+      neural translation system to just over 140 msec per sentence
+      on a single CPU core for English-German.
+
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2016
+    authors: Remi Lebret, David Grangier, and Michael Auli
+    title: Neural Text Generation from Structured Data with Application to the Biography Domain
+    doc-url: papers/emnlp2016_biogen.pdf
+    img: emnlp2016_biogen
+    booktitle: Proceedings of EMNLP
+    booktitle-url: http://emnlp2016.net
+    data: http://github.com/DavidGrangier/wikipedia-biography-dataset
+    venue: conference
+    abstract: >
+      This paper introduces a neural model for concept-to-text
+      generation that scales to large, rich domains.
+      It generates biographical sentences from fact tables on
+      a new dataset of biographies from Wikipedia.
+      This set is an order of magnitude larger than existing
+      resources with over 700k samples and a 400k vocabulary.
+      Our model builds on conditional neural language models
+      for text generation.
+      To deal with the large vocabulary, we extend these models
+      to mix a fixed vocabulary with copy actions that transfer
+      sample-specific words from the input database to
+      the generated output sentence.
+      To deal with structured data, we allow the model to
+      embed words differently depending on the data fields
+      in which they occur.
+      Our neural model significantly outperforms a Templated
+      Kneser-Ney language model by nearly 15 BLEU.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2016
     authors: Joel Legrand, Michael Auli, and Ronan Collobert
     title: Neural Network-based Word Alignment through Score Aggregation
     doc-url: papers/wmt2016_align.pdf

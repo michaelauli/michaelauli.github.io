@@ -4,7 +4,7 @@
   </a>
   <div class="media-body">
     <strong>{{ include.paper.title }}</strong><br/>
-    {% if include.paper.authors %}{{ include.paper.authors }}.{% endif %}  
+    {% if include.paper.authors %}{{ include.paper.authors }}.{% endif %}
     {% case include.paper.paper-type %}
       {% when "inproceedings" %}
         In
@@ -31,8 +31,8 @@
       {% when "firstyearreport" %}
         First-Year Ph.D. Report, {{ include.paper.institution }}.
       {% when "ug-thesis" %}
-        Undergraduate Thesis, {{ include.paper.institution }}.                  
-    {% endcase %} 
+        Undergraduate Thesis, {{ include.paper.institution }}.
+    {% endcase %}
     {{ include.paper.year }}.<br/>
     {% if include.paper.abstract %}
       <a data-toggle="modal" href="#abstract{{ include.paper.img }}" class="label label-default">Abstract</a>
@@ -48,7 +48,7 @@
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-      </div><!-- /.modal --> 
+      </div><!-- /.modal -->
     {% endif %}
     {% if include.paper.errata %}
       <!-- Modal -->
@@ -63,13 +63,13 @@
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-      </div><!-- /.modal --> 
+      </div><!-- /.modal -->
        <a data-toggle="modal" href="#errata{{ include.paper.img }}" class="label label-warning">
          Errata
-      </a>&nbsp;      
+      </a>&nbsp;
     {% endif %}
-    {% if include.paper.slides %} 
-      <a href="{{ include.paper.slides }}" class="label label-info">Slides</a> 
+    {% if include.paper.slides %}
+      <a href="{{ include.paper.slides }}" class="label label-info">Slides</a>
     {% endif %}
     {% if include.paper.latex %}
       <a href="{{ include.paper.latex }}" class="label label-danger">\( \LaTeX \)</a>
@@ -77,6 +77,10 @@
     {% if include.paper.code %}
       <a href="{{ include.paper.code }}" class="label label-success">Code</a>
     {% endif %}
+    {% if include.paper.data %}
+      <a href="{{ include.paper.data }}" class="label label-warning">Data</a>
+    {% endif %}
+
   </div>
 </div>
 
