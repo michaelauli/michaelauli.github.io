@@ -16,7 +16,6 @@ talks:
     detail: Talk at Carnegie Mellon University, Johns Hopkins University, BBN Technologies, IBM Research and Microsoft Research, 2011.
     url: "talks/parsing-tagging-talk.pdf"
     img: "parsing-tagging-talk.jpg"
-  -
 papers:
   -
     layout: paper
