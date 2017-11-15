@@ -2,6 +2,11 @@ exclude: ['README.md']
 timezone: US/Pacific
 talks:
   -
+    title: Sequence to Sequence Learning&#58; Fast Training and Inference with Gated Convolutions
+    detail: Talk at Johns Hopkins University, Oct 2017.
+    url: "talks/convs2s.pdf"
+    img: "convs2s.png"
+  -
     title: Learning to translate with neural networks
     detail: Talk at Facebook, Google, Amazon and the University of Washington, 2014.
     url: "talks/facebook-rnn-translate.pdf"
@@ -11,7 +16,81 @@ talks:
     detail: Talk at Carnegie Mellon University, Johns Hopkins University, BBN Technologies, IBM Research and Microsoft Research, 2011.
     url: "talks/parsing-tagging-talk.pdf"
     img: "parsing-tagging-talk.jpg"
+  -
 papers:
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2017
+    authors: Sergey Edunov, Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
+    title: Classical Structured Prediction Losses for Sequence to Sequence Learning
+    doc-url: https://arxiv.org/pdf/1711.04956.pdf
+    img: classicseqlvl
+    booktitle: arXiv:1711.04956
+    booktitle-url:
+    venue: conference
+    abstract: >
+      There has been much recent work on training neural attention models
+      at the sequence-level using either reinforcement learning-style methods
+      or by optimizing the beam. In this paper, we survey a range of
+      classical objective functions that have been widely used to train
+      linear models for structured prediction and apply them to neural
+      sequence to sequence models. Our experiments show that these losses
+      can perform surprisingly well by slightly outperforming beam search
+      optimization in a like for like setup. We also report new state of
+      the art results on both IWSLT 2014 German-English translation as well
+      as Gigaword abstractive summarization.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2017
+    authors: Angela Fan, David Grangier, Michael Auli
+    title: Controllable Abstractive Summarization
+    doc-url: https://arxiv.org/pdf/1711.05217.pdf
+    img: controlabs
+    booktitle: arXiv:1711.05217
+    booktitle-url:
+    venue: conference
+    abstract: >
+      Current models for document summarization ignore user preferences
+      such as the desired length, style or entities that the user has
+      a preference for. We present a neural summarization model that
+      enables users to specify such high level attributes in order
+      to control the shape of the final summaries to better suit
+      their needs. With user input, we show that our system can produce
+      high quality summaries that are true to user preference.
+      Without user input, we can set the control variables automatically
+      and outperform comparable state of the art summarization systems
+      despite the relative simplicity of our model.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2017
+    authors: David Grangier, Michael Auli
+    title: QuickEdit&#58; Editing Text &amp; Translations via Simple Delete Actions
+    doc-url: https://arxiv.org/pdf/1711.04805.pdf
+    img: quickedit
+    booktitle: arXiv:1711.04805
+    booktitle-url:
+    venue: conference
+    abstract: >
+      We propose a framework for computer-assisted text editing.
+      It applies to translation post-editing and to paraphrasing and
+      relies on very simple interactions. A human editor modifies a sentence
+      by marking tokens they would like the system to change.
+      Our model then generates a new sentence which reformulates
+      the initial sentence by avoiding the words from the marked tokens.
+      Our approach builds upon neural sequence-to-sequence modeling and
+      introduces a neural network which takes as input a sentence along
+      with deleted token markers. Our model is trained on translation
+      bi-text by simulating post-edits. Our results on post-editing
+      for machine translation and paraphrasing evaluate the performance
+      of our approach. We show +11.4 BLEU with limited post-editing effort
+      on the WMT-14 English-German translation task (25.2 to 36.6),
+      which represents +5.9 BLEU over the post-editing baseline (30.7 to 36.6).
   -
     layout: paper
     paper-type: inproceedings
@@ -21,7 +100,7 @@ papers:
     title: Convolutional Sequence to Sequence Learning
     doc-url: https://arxiv.org/pdf/1705.03122.pdf
     img: fconv
-    booktitle: arXiv:1705.03122
+    booktitle: ICML
     booktitle-url:
     venue: conference
     code: https://github.com/facebookresearch/fairseq
@@ -43,12 +122,12 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2016
+    year: 2017
     authors: Yann N. Dauphin, Angela Fan, Michael Auli and David Grangier
     title: Language Modeling with Gated Convolutional Networks
     doc-url: papers/gcnn.pdf
     img: gcnn
-    booktitle: arXiv:1612.08083
+    booktitle: ICML
     booktitle-url:
     venue: conference
     abstract: >
@@ -72,12 +151,12 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2016
+    year: 2017
     authors: Jonas Gehring, Michael Auli, David Grangier, Yann N. Dauphin
     title: A Convolutional Encoder Model for Neural Machine Translation
     doc-url: papers/convenc.pdf
     img: convenc
-    booktitle: arXiv:1611.02344
+    booktitle: ACL
     booktitle-url:
     venue: conference
     abstract: >
@@ -161,7 +240,7 @@ papers:
     title: Neural Text Generation from Structured Data with Application to the Biography Domain
     doc-url: papers/emnlp2016_biogen.pdf
     img: emnlp2016_biogen
-    booktitle: Proceedings of EMNLP
+    booktitle: Proc. of EMNLP
     booktitle-url: http://emnlp2016.net
     data: http://github.com/DavidGrangier/wikipedia-biography-dataset
     venue: conference
@@ -192,7 +271,7 @@ papers:
     title: Neural Network-based Word Alignment through Score Aggregation
     doc-url: papers/wmt2016_align.pdf
     img: wmt2016_align
-    booktitle: Proceedings of WMT
+    booktitle: Proc. of WMT
     booktitle-url: http://statmt.org/wmt16
     venue: conference
     abstract: >
@@ -218,7 +297,7 @@ papers:
     title: Strategies for Training Large Vocabulary Neural Language Models
     doc-url: papers/acl2016_large_vocab_lm.pdf
     img: acl2016_large_vocab_lm
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://www.acl2016.org
     venue: conference
     abstract: >
@@ -244,7 +323,7 @@ papers:
     title: Expected F-Measure Training for Shift-Reduce Parsing with Recurrent Neural Networks
     doc-url: papers/naacl2016_xf1_ccg.pdf
     img: naacl2016_xf1_ccg
-    booktitle: Proceedings of NAACL
+    booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2016
     venue: conference
     abstract: >
@@ -263,7 +342,7 @@ papers:
     title: Abstractive Sentence Summarization with Attentive Recurrent Neural Networks
     doc-url: papers/naacl2016_summary_rnn.pdf
     img: naacl2016_summary_rnn
-    booktitle: Proceedings of NAACL
+    booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2016
     venue: conference
     abstract: >
@@ -292,7 +371,7 @@ papers:
     doc-url: papers/iclr2016_mixer.pdf
     img: iclr2016_mixer
     code: http://github.com/facebookresearch/MIXER
-    booktitle: Proceedings of ICLR
+    booktitle: Proc. of ICLR
     booktitle-url: http://www.iclr.cc/doku.php?id=iclr2016:main
     venue: conference
     abstract: >
@@ -321,7 +400,7 @@ papers:
     title: CCG Supertagging with a Recurrent Neural Network
     doc-url: papers/super-rnn.pdf
     img: super-rnn
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://www.acl2015.org
     venue: conference
     abstract: >
@@ -344,7 +423,7 @@ papers:
     title: deltaBLEU&#58; A Discriminative Metric for Generation Tasks with Intrinsically Diverse Targets
     doc-url: papers/delta-bleu.pdf
     img: delta-bleu
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://www.acl2015.org
     venue: conference
     abstract: >
@@ -366,7 +445,7 @@ papers:
     title: Learning Translation Models from Monolingual Continuous Representations
     doc-url: papers/dist_phrase_learn.pdf
     img: dist_phrase_learn
-    booktitle: Proceedings of NAACL
+    booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2015
     venue: conference
     abstract: >
@@ -397,7 +476,7 @@ papers:
     title: A Neural Network Approach to Context-Sensitive Generation of Conversational Responses
     doc-url: papers/chitchat.pdf
     img: chitchat
-    booktitle: Proceedings of NAACL
+    booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2015
     venue: conference
     abstract: >
@@ -420,7 +499,7 @@ papers:
     title: Large Scale Expected BLEU Training of Phrase-based Reordering Models
     doc-url: papers/expbleu-reorder.pdf
     img: expbleu-reorder
-    booktitle: Proceedings of EMNLP
+    booktitle: Proc. of EMNLP
     booktitle-url: http://emnlp2014.org/
     venue: conference
     abstract: >
@@ -447,7 +526,7 @@ papers:
     title: Decoder Integration and Expected BLEU Training for Recurrent Neural Network Language Models
     doc-url: papers/expbleu-rnn.pdf
     img: expbleu-rnn
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://acl2014.org
     venue: conference
     abstract: >
@@ -471,7 +550,7 @@ papers:
     title: Minimum Translation Modeling with Recurrent Neural Networks
     doc-url: papers/mtu-rnn.pdf
     img: mtu-rnn
-    booktitle: Proceedings of EACL
+    booktitle: Proc. of EACL
     booktitle-url: http://eacl2014.org
     venue: conference
     abstract: >
@@ -494,7 +573,7 @@ papers:
     title: Joint Language and Translation Modeling with Recurrent Neural Networks
     doc-url: papers/rnn-joint-lm-tm.pdf
     img: rnn-joint-lm-tm
-    booktitle: Proceedings of EMNLP
+    booktitle: Proc. of EMNLP
     booktitle-url: http://hum.csse.unimelb.edu.au/emnlp2013
     venue: conference
     abstract: >
@@ -539,7 +618,7 @@ papers:
     title: Training a Log-Linear Parser with Loss Functions via Softmax-Margin
     doc-url: papers/softmax-ccg.pdf
     img: softmax-ccg
-    booktitle: Proceedings of EMNLP
+    booktitle: Proc. of EMNLP
     booktitle-url: http://conferences.inf.ed.ac.uk/emnlp2011/
     venue: conference
     abstract: >
@@ -566,7 +645,7 @@ papers:
     title: A Comparison of Loopy Belief Propagation and Dual Decomposition for Integrated CCG Supertagging and Parsing
     doc-url: papers/lbp-vs-dd.pdf
     img: lbp-vs-dd
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://www.acl2011.org/
     venue: conference
     abstract: >
@@ -591,7 +670,7 @@ papers:
     title: Efficient CCG Parsing&#58; A* versus Adaptive Supertagging
     doc-url: papers/astar-ccg.pdf
     img: astar-ccg
-    booktitle: Proceedings of ACL
+    booktitle: Proc. of ACL
     booktitle-url: http://www.acl2011.org/
     venue: conference
     abstract: >
@@ -652,7 +731,7 @@ papers:
     authors: Michael Auli, Adam Lopez, Hieu Hoang, and Philipp Koehn
     title: A Systematic Analysis of Translation Model Search Spaces
     doc-url: http://www.aclweb.org/anthology/W/W09/W09-0437.pdf
-    booktitle: Proceedings of the Fourth Workshop on Statistical Machine Translation
+    booktitle: Proc. of WMT
     booktitle-url: http://www.statmt.org/wmt09/
     img: wmt2009
     venue: workshop
