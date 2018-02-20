@@ -21,13 +21,13 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2017
+    year: 2018
     authors: Sergey Edunov, Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
     title: Classical Structured Prediction Losses for Sequence to Sequence Learning
     doc-url: https://arxiv.org/pdf/1711.04956.pdf
     img: classicseqlvl
-    booktitle: arXiv:1711.04956
-    booktitle-url:
+    booktitle: Proc. of NAACL
+    booktitle-url: http://naacl.org/naacl-hlt-2018/
     venue: conference
     abstract: >
       There has been much recent work on training neural attention models
@@ -67,13 +67,13 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2017
+    year: 2018
     authors: David Grangier, Michael Auli
     title: QuickEdit&#58; Editing Text &amp; Translations via Simple Delete Actions
     doc-url: https://arxiv.org/pdf/1711.04805.pdf
     img: quickedit
-    booktitle: arXiv:1711.04805
-    booktitle-url:
+    booktitle: Proc. of NAACL
+    booktitle-url: http://naacl.org/naacl-hlt-2018/
     venue: conference
     abstract: >
       We propose a framework for computer-assisted text editing.
