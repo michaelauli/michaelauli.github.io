@@ -22,9 +22,40 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2018
+    authors: Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
+    title: Analyzing Uncertainty in Neural Machine Translation
+    doc-url: https://arxiv.org/pdf/1803.00047
+    img: uncertainty
+    booktitle: arXiv:1803.00047
+    booktitle-url: https://arxiv.org/abs/1803.00047
+    venue: conference
+    abstract: >
+      Machine translation is a popular test bed for research in neural 
+      sequence-to-sequence models but despite much recent research, 
+      there is still a lack of understanding of these models. 
+      Practitioners report performance degradation with large beams, 
+      the under-estimation of rare words and a lack of diversity 
+      in the final translations. Our study relates some of these issues 
+      to the inherent uncertainty of the task, due to the existence of 
+      multiple valid translations for a single source sentence, and 
+      to the extrinsic uncertainty caused by noisy training data. 
+      We propose tools and metrics to assess how uncertainty in the data 
+      is captured by the model distribution and how it affects search 
+      strategies that generate translations. Our results show that 
+      search works remarkably well but that the models tend to spread 
+      too much probability mass over the hypothesis space. 
+      Next, we propose tools to assess model calibration and show how 
+      to easily fix some shortcomings of current models. We release 
+      both code and multiple human reference translations for two 
+      popular benchmarks.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
     authors: Sergey Edunov, Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
     title: Classical Structured Prediction Losses for Sequence to Sequence Learning
-    doc-url: https://arxiv.org/pdf/1711.04956.pdf
+    doc-url: https://arxiv.org/pdf/1711.04956
     img: classicseqlvl
     booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2018/
@@ -47,10 +78,10 @@ papers:
     year: 2017
     authors: Angela Fan, David Grangier, Michael Auli
     title: Controllable Abstractive Summarization
-    doc-url: https://arxiv.org/pdf/1711.05217.pdf
+    doc-url: https://arxiv.org/pdf/1711.05217
     img: controlabs
     booktitle: arXiv:1711.05217
-    booktitle-url:
+    booktitle-url: https://arxiv.org/abs/1711.05217
     venue: conference
     abstract: >
       Current models for document summarization ignore user preferences
@@ -70,7 +101,7 @@ papers:
     year: 2018
     authors: David Grangier, Michael Auli
     title: QuickEdit&#58; Editing Text &amp; Translations via Simple Delete Actions
-    doc-url: https://arxiv.org/pdf/1711.04805.pdf
+    doc-url: https://arxiv.org/pdf/1711.04805
     img: quickedit
     booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2018/
@@ -97,7 +128,7 @@ papers:
     year: 2017
     authors: Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin
     title: Convolutional Sequence to Sequence Learning
-    doc-url: https://arxiv.org/pdf/1705.03122.pdf
+    doc-url: https://arxiv.org/pdf/1705.03122
     img: fconv
     booktitle: ICML
     booktitle-url:
