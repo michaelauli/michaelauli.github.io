@@ -22,6 +22,33 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2018
+    authors: Dario Pavllo, David Grangier, Michael Auli
+    title: 'QuaterNet: A Quaternion-based Recurrent Model for Human Motion'
+    doc-url: https://arxiv.org/pdf/1805.06485.pdf
+    img: quaternet
+    booktitle: arXiv:1805.06485
+    booktitle-url: https://arxiv.org/abs/1805.06485
+    venue: conference
+    abstract: >
+      Deep learning for predicting or generating 3D human pose sequences 
+      is an active research area. Previous work regresses either joint 
+      rotations or joint positions. The former strategy is prone to error
+      accumulation along the kinematic chain, as well as discontinuities 
+      when using Euler angle or exponential map parameterizations. 
+      The latter requires re-projection onto skeleton constraints to avoid 
+      bone stretching and invalid configurations. This work addresses both 
+      limitations. Our recurrent network, QuaterNet, represents rotations 
+      with quaternions and our loss function performs forward kinematics 
+      on a skeleton to penalize absolute position errors instead of angle 
+      errors. On short-term predictions, QuaterNet improves the 
+      state-of-the-art quantitatively. For long-term generation, our 
+      approach is qualitatively judged as realistic as recent neural 
+      strategies from the graphics literature.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
     authors: Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
     title: Analyzing Uncertainty in Neural Machine Translation
     doc-url: https://arxiv.org/pdf/1803.00047
