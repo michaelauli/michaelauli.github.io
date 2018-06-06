@@ -22,6 +22,30 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2018
+    authors: Myle Ott, Sergey Edunov, David Grangier, Michael Auli
+    title: Scaling Neural Machine Translation
+    doc-url: https://arxiv.org/pdf/1806.00187
+    img: scaling
+    booktitle: arXiv:1806.00187
+    booktitle-url: https://arxiv.org/abs/1806.00187
+    venue: conference
+    abstract: >
+      Sequence to sequence learning models still require several days
+      to reach state of the art performance on large benchmark datasets
+      using a single machine. This paper shows that reduced precision
+      and large batch training can speedup training by nearly 5x on
+      a single 8-GPU machine with careful tuning and implementation.
+      On WMT'14 English-German translation, we match the accuracy
+      of Vaswani et al. (2017) in under 5 hours when training
+      on 8 GPUs and we obtain a new state of the art of 29.3 BLEU
+      after training for 91 minutes on 128 GPUs.
+      We further improve these results to 29.8 BLEU by training
+      on the much larger Paracrawl dataset.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
     authors: Dario Pavllo, David Grangier, Michael Auli
     title: 'QuaterNet: A Quaternion-based Recurrent Model for Human Motion'
     doc-url: https://arxiv.org/pdf/1805.06485.pdf
@@ -30,19 +54,19 @@ papers:
     booktitle-url: https://arxiv.org/abs/1805.06485
     venue: conference
     abstract: >
-      Deep learning for predicting or generating 3D human pose sequences 
-      is an active research area. Previous work regresses either joint 
+      Deep learning for predicting or generating 3D human pose sequences
+      is an active research area. Previous work regresses either joint
       rotations or joint positions. The former strategy is prone to error
-      accumulation along the kinematic chain, as well as discontinuities 
-      when using Euler angle or exponential map parameterizations. 
-      The latter requires re-projection onto skeleton constraints to avoid 
-      bone stretching and invalid configurations. This work addresses both 
-      limitations. Our recurrent network, QuaterNet, represents rotations 
-      with quaternions and our loss function performs forward kinematics 
-      on a skeleton to penalize absolute position errors instead of angle 
-      errors. On short-term predictions, QuaterNet improves the 
-      state-of-the-art quantitatively. For long-term generation, our 
-      approach is qualitatively judged as realistic as recent neural 
+      accumulation along the kinematic chain, as well as discontinuities
+      when using Euler angle or exponential map parameterizations.
+      The latter requires re-projection onto skeleton constraints to avoid
+      bone stretching and invalid configurations. This work addresses both
+      limitations. Our recurrent network, QuaterNet, represents rotations
+      with quaternions and our loss function performs forward kinematics
+      on a skeleton to penalize absolute position errors instead of angle
+      errors. On short-term predictions, QuaterNet improves the
+      state-of-the-art quantitatively. For long-term generation, our
+      approach is qualitatively judged as realistic as recent neural
       strategies from the graphics literature.
   -
     layout: paper
@@ -87,6 +111,7 @@ papers:
     booktitle: Proc. of NAACL
     booktitle-url: http://naacl.org/naacl-hlt-2018/
     venue: conference
+    code: https://github.com/pytorch/fairseq/tree/classic_seqlevel
     abstract: >
       There has been much recent work on training neural attention models
       at the sequence-level using either reinforcement learning-style methods
