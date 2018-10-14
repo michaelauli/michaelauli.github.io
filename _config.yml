@@ -22,6 +22,34 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2018
+    authors: Alexei Baevski,, Michael Auli
+    title: Adaptive Input Representations for Neural Language Modeling
+    doc-url: https://arxiv.org/abs/1809.10853
+    img: inpress
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1809.10853
+    venue: conference
+    abstract: >
+      We introduce adaptive input representations for neural language 
+      modeling which extend the adaptive softmax of 
+      Grave et al. (2017) to input representations of variable capacity. 
+      There are several choices on how to factorize the input and 
+      output layers, and whether to model words, characters or 
+      sub-word units. 
+      We perform a systematic comparison of popular choices for 
+      a self-attentional architecture. Our experiments show that 
+      models equipped with adaptive embeddings are more than 
+      twice as fast to train than the popular character input CNN 
+      while having a lower number of parameters. 
+      We achieve a new state of the art on the WikiText-103 
+      benchmark of 20.51 perplexity, improving the next best 
+      known result by 8.7 perplexity. On the Billion word benchmark, 
+      we achieve a state of the art of 24.14 perplexity.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
     authors: Sergey Edunov, Myle Ott, David Grangier, Michael Auli
     title: Understanding Back-Translation at Scale
     doc-url: https://arxiv.org/abs/1808.09381
@@ -77,6 +105,7 @@ papers:
     authors: Dario Pavllo, David Grangier, Michael Auli
     title: 'QuaterNet: A Quaternion-based Recurrent Model for Human Motion'
     doc-url: https://arxiv.org/pdf/1805.06485.pdf
+    code: https://github.com/facebookresearch/QuaterNet
     img: quaternet
     booktitle: Proc. of BMVC
     booktitle-url: https://arxiv.org/abs/1805.06485
