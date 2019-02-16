@@ -21,30 +21,164 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2018
-    authors: Alexei Baevski,, Michael Auli
+    year: 2019
+    authors: Felix Wu, Angela Fan, Alexei Baevski, Yann N Dauphin, Michael Auli
+    title: Pay Less Attention with Lightweight and Dynamic Convolutions
+    doc-url: https://arxiv.org/pdf/1901.10430.pdf
+    code: https://github.com/pytorch/fairseq
+    img: dynamicconv
+    booktitle: Proc. of ICLR
+    booktitle-url: https://arxiv.org/abs/1901.10430
+    venue: conference
+    abstract: >
+      Self-attention is a useful mechanism to build generative models
+      for language and images.
+      It determines the importance of context elements by comparing
+      each element to the current time step. In this paper, we show
+      that a very lightweight convolution can perform competitively
+      to the best reported self-attention results.
+      Next, we introduce dynamic convolutions which are simpler and
+      more efficient than self-attention.
+      We predict separate convolution kernels based solely on the
+      current time-step in order to determine the importance of
+      context elements.
+      The number of operations required by this approach scales
+      linearly in the input length, whereas self-attention is quadratic.
+      Experiments on large-scale machine translation,
+      language modeling and abstractive summarization show that
+      dynamic convolutions improve over strong self-attention models.
+      On the WMT'14 English-German test set dynamic convolutions
+      achieve a new state of the art of 29.7 BLEU.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    authors: Emily Dinan, Stephen Roller, Kurt Shuster, Angela Fan, Michael Auli, Jason Weston
+    title: 'Wizard of Wikipedia: Knowledge-Powered Conversational agents'
+    doc-url: https://arxiv.org/pdf/1811.01241
+    img: wizard
+    booktitle: Proc. of ICLR
+    booktitle-url: https://arxiv.org/abs/1811.01241
+    venue: conference
+    abstract: >
+      In open-domain dialogue intelligent agents should exhibit
+      the use of knowledge, however there are few convincing demonstrations
+      of this to date.
+      The most popular sequence to sequence models typically" generate
+      and hope" generic utterances that can be memorized in the weights
+      of the model when mapping from input utterance (s) to output,
+      rather than employing recalled knowledge as context.
+      Use of knowledge has so far proved difficult, in part because
+      of the lack of a supervised learning benchmark task which exhibits
+      knowledgeable open dialogue with clear grounding.
+      To that end we collect and release a large dataset with conversations
+      directly grounded with knowledge retrieved from Wikipedia.
+      We then design architectures capable of retrieving knowledge,
+      reading and conditioning on it, and finally generating natural
+      responses.
+      Our best performing dialogue models are able to conduct
+      knowledgeable discussions on open-domain topics as evaluated
+      by automatic metrics and human evaluations, while our
+      new benchmark allows for measuring further improvements
+      in this important research direction.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    authors: Alexei Baevski, Michael Auli
     title: Adaptive Input Representations for Neural Language Modeling
-    doc-url: https://arxiv.org/abs/1809.10853
-    img: inpress
-    booktitle: arXiv
+    doc-url: https://arxiv.org/pdf/1809.10853
+    img: adaptive
+    booktitle: Proc. of ICLR
+    code: https://github.com/pytorch/fairseq
     booktitle-url: https://arxiv.org/abs/1809.10853
     venue: conference
     abstract: >
-      We introduce adaptive input representations for neural language 
-      modeling which extend the adaptive softmax of 
-      Grave et al. (2017) to input representations of variable capacity. 
-      There are several choices on how to factorize the input and 
-      output layers, and whether to model words, characters or 
-      sub-word units. 
-      We perform a systematic comparison of popular choices for 
-      a self-attentional architecture. Our experiments show that 
-      models equipped with adaptive embeddings are more than 
-      twice as fast to train than the popular character input CNN 
-      while having a lower number of parameters. 
-      We achieve a new state of the art on the WikiText-103 
-      benchmark of 20.51 perplexity, improving the next best 
-      known result by 8.7 perplexity. On the Billion word benchmark, 
+      We introduce adaptive input representations for neural language
+      modeling which extend the adaptive softmax of
+      Grave et al. (2017) to input representations of variable capacity.
+      There are several choices on how to factorize the input and
+      output layers, and whether to model words, characters or
+      sub-word units.
+      We perform a systematic comparison of popular choices for
+      a self-attentional architecture. Our experiments show that
+      models equipped with adaptive embeddings are more than
+      twice as fast to train than the popular character input CNN
+      while having a lower number of parameters.
+      We achieve a new state of the art on the WikiText-103
+      benchmark of 20.51 perplexity, improving the next best
+      known result by 8.7 perplexity. On the Billion word benchmark,
       we achieve a state of the art of 24.14 perplexity.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
+    authors: Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier
+    title: Modeling Human Motion with Quaternion-based Neural Networks
+    doc-url: https://arxiv.org/pdf/1901.07677
+    img: quaternet
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1901.07677
+    venue: conference
+    abstract: >
+      Previous work on predicting or generating 3D human pose
+      sequences regresses either joint rotations or joint positions.
+      The former strategy is prone to error accumulation along
+      the kinematic chain, as well as discontinuities when using
+      Euler angles or exponential maps as parameterizations.
+      The latter requires re-projection onto skeleton constraints
+      to avoid bone stretching and invalid configurations.
+      This work addresses both limitations. QuaterNet represents
+      rotations with quaternions and our loss function performs
+      forward kinematics on a skeleton to penalize absolute
+      position errors instead of angle errors.
+      We investigate both recurrent and convolutional architectures
+      and evaluate on short-term prediction and long-term generation.
+      For the latter, our approach is qualitatively judged as
+      realistic as recent neural strategies from the graphics
+      literature.
+      Our experiments compare quaternions to Euler angles
+      as well as exponential maps and show that only a
+      very short context is required to make reliable future
+      predictions.
+      Finally, we show that the standard evaluation protocol
+      for Human3. 6M produces high variance results and
+      we propose a simple solution.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2018
+    authors: Dario Pavllo, Christoph Feichtenhofer, David Grangier, Michael Auli
+    title: 3D human pose estimation in video with temporal convolutions and semi-supervised training
+    doc-url: https://arxiv.org/pdf/1811.11742
+    code: https://github.com/facebookresearch/VideoPose3D
+    img: videopose
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1811.11742
+    venue: conference
+    abstract: >
+      In this work, we demonstrate that 3D poses in video can
+      be effectively estimated with a fully convolutional model
+      based on dilated temporal convolutions over 2D keypoints.
+      We also introduce back-projection, a simple and effective
+      semi-supervised training method that leverages unlabeled
+      video data.
+      We start with predicted 2D keypoints for unlabeled video,
+      then estimate 3D poses and finally back-project to
+      the input 2D keypoints.
+      In the supervised setting, our fully-convolutional model
+      outperforms the previous best result from the literature
+      by 6 mm mean per-joint position error on Human3. 6M,
+      corresponding to an error reduction of 11%, and the model
+      also shows significant improvements on HumanEva-I.
+      Moreover, experiments with back-projection show that it
+      comfortably outperforms previous state-of-the-art results
+      in semi-supervised settings where labeled data is scarce.
+      Code and models are available.
   -
     layout: paper
     paper-type: inproceedings
@@ -52,26 +186,27 @@ papers:
     year: 2018
     authors: Sergey Edunov, Myle Ott, David Grangier, Michael Auli
     title: Understanding Back-Translation at Scale
-    doc-url: https://arxiv.org/abs/1808.09381
+    doc-url: https://arxiv.org/pdf/1808.09381
+    code: https://github.com/pytorch/fairseq
     img: backtranslate
     booktitle: Proc. of EMNLP
     booktitle-url: https://arxiv.org/abs/1806.00187
     venue: conference
     abstract: >
-      An effective method to improve neural machine translation 
-      with monolingual data is to augment the parallel training 
-      corpus with back-translations of target language sentences. 
-      This work broadens the understanding of back-translation 
-      and investigates a number of methods to generate synthetic 
-      source sentences. We find that in all but resource poor 
-      settings back-translations obtained via sampling or noised 
-      beam outputs are most effective. Our analysis shows that 
-      sampling or noisy synthetic data gives a much stronger 
-      training signal than data generated by beam or greedy search. 
-      We also compare how synthetic data compares to genuine bitext 
-      and study various domain effects. Finally, we scale to 
-      hundreds of millions of monolingual sentences and achieve 
-      a new state of the art of 35 BLEU on the 
+      An effective method to improve neural machine translation
+      with monolingual data is to augment the parallel training
+      corpus with back-translations of target language sentences.
+      This work broadens the understanding of back-translation
+      and investigates a number of methods to generate synthetic
+      source sentences. We find that in all but resource poor
+      settings back-translations obtained via sampling or noised
+      beam outputs are most effective. Our analysis shows that
+      sampling or noisy synthetic data gives a much stronger
+      training signal than data generated by beam or greedy search.
+      We also compare how synthetic data compares to genuine bitext
+      and study various domain effects. Finally, we scale to
+      hundreds of millions of monolingual sentences and achieve
+      a new state of the art of 35 BLEU on the
       WMT'14 English-German test set.
   -
     layout: paper
@@ -81,6 +216,7 @@ papers:
     authors: Myle Ott, Sergey Edunov, David Grangier, Michael Auli
     title: Scaling Neural Machine Translation
     doc-url: https://arxiv.org/pdf/1806.00187
+    code: https://github.com/pytorch/fairseq
     img: scaling
     booktitle: Proc. of WMT
     booktitle-url: https://arxiv.org/abs/1806.00187
@@ -134,7 +270,7 @@ papers:
     title: Analyzing Uncertainty in Neural Machine Translation
     doc-url: https://arxiv.org/pdf/1803.00047
     img: uncertainty
-    booktitle: ICML
+    booktitle: Proc. of ICML
     booktitle-url: https://arxiv.org/abs/1803.00047
     venue: conference
     abstract: >
@@ -239,7 +375,7 @@ papers:
     title: Convolutional Sequence to Sequence Learning
     doc-url: https://arxiv.org/pdf/1705.03122
     img: fconv
-    booktitle: ICML
+    booktitle: Proc. of ICML
     booktitle-url:
     venue: conference
     code: https://github.com/facebookresearch/fairseq
@@ -266,7 +402,7 @@ papers:
     title: Language Modeling with Gated Convolutional Networks
     doc-url: papers/gcnn.pdf
     img: gcnn
-    booktitle: ICML
+    booktitle: Proc. of ICML
     booktitle-url:
     venue: conference
     abstract: >
@@ -295,7 +431,7 @@ papers:
     title: A Convolutional Encoder Model for Neural Machine Translation
     doc-url: papers/convenc.pdf
     img: convenc
-    booktitle: ACL
+    booktitle: Proc. of ACL
     booktitle-url:
     venue: conference
     abstract: >
