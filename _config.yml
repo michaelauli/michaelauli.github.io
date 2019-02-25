@@ -22,6 +22,42 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2019
+    authors: Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier
+    title: Modeling Human Motion with Quaternion-based Neural Networks
+    doc-url: https://arxiv.org/pdf/1901.07677
+    img: quaternet
+    booktitle: CVPR
+    booktitle-url: https://arxiv.org/abs/1901.07677
+    venue: conference
+    abstract: >
+      Previous work on predicting or generating 3D human pose
+      sequences regresses either joint rotations or joint positions.
+      The former strategy is prone to error accumulation along
+      the kinematic chain, as well as discontinuities when using
+      Euler angles or exponential maps as parameterizations.
+      The latter requires re-projection onto skeleton constraints
+      to avoid bone stretching and invalid configurations.
+      This work addresses both limitations. QuaterNet represents
+      rotations with quaternions and our loss function performs
+      forward kinematics on a skeleton to penalize absolute
+      position errors instead of angle errors.
+      We investigate both recurrent and convolutional architectures
+      and evaluate on short-term prediction and long-term generation.
+      For the latter, our approach is qualitatively judged as
+      realistic as recent neural strategies from the graphics
+      literature.
+      Our experiments compare quaternions to Euler angles
+      as well as exponential maps and show that only a
+      very short context is required to make reliable future
+      predictions.
+      Finally, we show that the standard evaluation protocol
+      for Human3. 6M produces high variance results and
+      we propose a simple solution.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
     authors: Felix Wu, Angela Fan, Alexei Baevski, Yann N Dauphin, Michael Auli
     title: Pay Less Attention with Lightweight and Dynamic Convolutions
     doc-url: https://arxiv.org/pdf/1901.10430.pdf
@@ -111,42 +147,6 @@ papers:
       benchmark of 20.51 perplexity, improving the next best
       known result by 8.7 perplexity. On the Billion word benchmark,
       we achieve a state of the art of 24.14 perplexity.
-  -
-    layout: paper
-    paper-type: inproceedings
-    selected: y
-    year: 2018
-    authors: Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier
-    title: Modeling Human Motion with Quaternion-based Neural Networks
-    doc-url: https://arxiv.org/pdf/1901.07677
-    img: quaternet
-    booktitle: arXiv
-    booktitle-url: https://arxiv.org/abs/1901.07677
-    venue: conference
-    abstract: >
-      Previous work on predicting or generating 3D human pose
-      sequences regresses either joint rotations or joint positions.
-      The former strategy is prone to error accumulation along
-      the kinematic chain, as well as discontinuities when using
-      Euler angles or exponential maps as parameterizations.
-      The latter requires re-projection onto skeleton constraints
-      to avoid bone stretching and invalid configurations.
-      This work addresses both limitations. QuaterNet represents
-      rotations with quaternions and our loss function performs
-      forward kinematics on a skeleton to penalize absolute
-      position errors instead of angle errors.
-      We investigate both recurrent and convolutional architectures
-      and evaluate on short-term prediction and long-term generation.
-      For the latter, our approach is qualitatively judged as
-      realistic as recent neural strategies from the graphics
-      literature.
-      Our experiments compare quaternions to Euler angles
-      as well as exponential maps and show that only a
-      very short context is required to make reliable future
-      predictions.
-      Finally, we show that the standard evaluation protocol
-      for Human3. 6M produces high variance results and
-      we propose a simple solution.
   -
     layout: paper
     paper-type: inproceedings
