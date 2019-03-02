@@ -60,7 +60,7 @@ papers:
     title: Modeling Human Motion with Quaternion-based Neural Networks
     doc-url: https://arxiv.org/pdf/1901.07677
     img: quaternet
-    booktitle: Proc. of CVPR
+    booktitle: arXiv
     booktitle-url: https://arxiv.org/abs/1901.07677
     venue: conference
     abstract: >
@@ -191,7 +191,7 @@ papers:
     doc-url: https://arxiv.org/pdf/1811.11742
     code: https://github.com/facebookresearch/VideoPose3D
     img: videopose
-    booktitle: arXiv
+    booktitle: Proc. of CVPR
     booktitle-url: https://arxiv.org/abs/1811.11742
     venue: conference
     abstract: >
