@@ -22,11 +22,143 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2019
+    title: "ELI5: Long Form Question Answering"
+    authors: Angela Fan, Yacine Jernite, Ethan Perez, Jason Weston, Michael Auli
+    doc-url:
+    img: inpress
+    booktitle: Proc. of ACL
+    booktitle-url:
+    code:
+    venue: conference
+    abstract: >
+      We introduce the first large-scale corpus for long-form question
+      answering, a task requiring elaborate and in-depth answers to
+      open-ended questions. The dataset comprises 270K threads from
+      the Reddit forum ``Explain Like I'm Five'' (ELI5) where an
+      online community provides answers to questions which are
+      comprehensible by five year olds.  Compared to existing
+      datasets, ELI5 comprises diverse questions requiring
+      multi-sentence answers. We provide a large set of web documents
+      to help answer the question. % in order to find support for the
+      answer. Automatic and human evaluations show that an abstractive
+      model trained with a multi-task objective outperforms
+      conventional Seq2Seq, language modeling, as well as a strong
+      extractive baseline.  However, our best model is still far from
+      human performance since raters prefer gold responses in over
+      86\% of cases, leaving ample opportunity for future improvement.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "wav2vec: Unsupervised Pre-training for Speech Recognition"
+    authors: Steffen Schneider, Alexei Baevski, Ronan Collobert, Michael Auli
+    doc-url: https://arxiv.org/pdf/1904.05862
+    img: wav2vec
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1904.05862
+    code:
+    venue: conference
+    abstract: >
+      We explore unsupervised pre-training for speech recognition by
+      learning representations of raw audio. wav2vec is trained on
+      large amounts of unlabeled audio data and the resulting
+      representations are then used to improve acoustic model
+      training. We pre-train a simple multi-layer convolutional neural
+      network optimized via a noise contrastive binary classification
+      task. Our experiments on WSJ reduce WER of a strong
+      character-based log-mel filterbank baseline by up to 32% when
+      only a few hours of transcribed data is available. Our approach
+      achieves 2.43% WER on the nov92 test set. This outperforms Deep
+      Speech 2, the best reported character-based system in the
+      literature while using three orders of magnitude less labeled
+      training data.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "fairseq: A fast, extensible toolkit for sequence modeling"
+    authors: Myle Ott, Sergey Edunov, Alexei Baevski, Angela Fan, Sam Gross, Nathan Ng, David Grangier, Michael Auli
+    doc-url: https://arxiv.org/pdf/1904.01038
+    img: fairseq
+    booktitle: Proc. of NAACL, Demonstrations
+    booktitle-url: https://arxiv.org/abs/1904.01038
+    code: https://github.com/pytorch/fairseq
+    venue: conference
+    abstract: >
+      fairseq is an open-source sequence modeling toolkit that
+      allows researchers and developers to train custom models
+      for translation, summarization, language modeling, and
+      other text generation tasks. The toolkit is based on PyTorch
+      and supports distributed training across multiple GPUs
+      and machines. We also support fast mixed-precision training
+      and inference on modern GPUs. A demo video can be found
+      here: https://www.youtube.com/watch?v=OtgDdWtHvto
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "Pre-trained Language Model Representations for Language Generation"
+    authors: Sergey Edunov, Alexei Baevski, Michael Auli
+    doc-url: https://arxiv.org/pdf/1903.09722
+    img: pretrain_langgen
+    booktitle: Proc. of NAACL
+    booktitle-url: https://arxiv.org/abs/1903.09722
+    code: https://github.com/pytorch/fairseq
+    venue: conference
+    abstract: >
+      Pre-trained language model representations have been
+      successful in a wide range of language understanding tasks.
+      In this paper, we examine different strategies to integrate
+      pretrained representations into sequence to sequence models
+      and apply it to neural machine translation and abstractive
+      summarization. We find that pre-trained representations are
+      most effective when added to the encoder network which slows
+      inference by only 14%. Our experiments in machine translation
+      show gains of up to 5.3 BLEU in a simulated resource-poor setup.
+      While returns diminish with more labeled data, we still
+      observe improvements when millions of sentence-pairs are
+      available. Finally, on abstractive summarization we achieve
+      a new state of the art on the full text version of
+      CNN-DailyMail.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "Cloze-driven Pretraining of Self-attention Networks"
+    authors: Alexei Baevski, Sergey Edunov, Yinhan Liu, Luke Zettlemoyer, Michael Auli
+    doc-url: https://arxiv.org/pdf/1903.07785
+    img: cloze
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1903.07785
+    code:
+    venue: conference
+    abstract: >
+      We present a new approach for pretraining a bi-directional
+      transformer model that provides significant performance
+      gains across a variety of language understanding problems.
+      Our model solves a cloze-style word reconstruction task,
+      where each word is ablated and must be predicted given the
+      rest of the text. Experiments demonstrate large performance
+      gains on GLUE and new state of the art results on NER as
+      well as constituency parsing benchmarks, consistent with
+      the concurrently introduced BERT model. We also present a
+      detailed analysis of a number of factors that contribute
+      to effective pretraining, including data domain and size,
+      model capacity, and variations on the cloze objective.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
     title: "Mixture Models for Diverse Machine Translation: Tricks of the Trade"
     authors: Tianxiao Shen, Myle Ott, Michael Auli, Marc'Aurelio Ranzato
     doc-url: https://arxiv.org/pdf/1902.07816
     img: moe
-    booktitle: arXiv
+    booktitle: Proc. of ICML
     booktitle-url: https://arxiv.org/abs/1902.07816
     code: https://github.com/pytorch/fairseq
     venue: conference
