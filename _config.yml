@@ -21,6 +21,15 @@ talks:
     detail: Talk at Carnegie Mellon University, Johns Hopkins University, BBN Technologies, IBM Research and Microsoft Research, 2011.
     url: "talks/parsing-tagging-talk.pdf"
     img: "parsing-tagging-talk.jpg"
+press:
+  -
+    title: Facebook details wav2vec, an AI algorithm that uses raw audio to improve speech recognition.
+    detail: Venturebeat, 5 Nov 2019.
+    url: "https://venturebeat.com/2019/11/05/facebook-details-wav2vec-an-ai-algorithm-that-uses-raw-audio-to-improve-speech-recognition/"
+  -
+    title: Facebook's new AI could lead to translations that actually make sense.
+    detail: Wired, 5 Sep 2018.
+    url: "https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/"
 papers:
   -
     layout: paper
