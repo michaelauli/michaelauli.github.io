@@ -2,6 +2,11 @@ exclude: ['README.md']
 timezone: US/Pacific
 talks:
   -
+    title: Efficient Sequence Modeling
+    detail: Talk at WNGT'19, Stanford, Berkeley, Nov 2019.
+    url: "talks/efficient-seq-modeling.pdf"
+    img: "efficient-seq-modeling.png"
+  -
     title: Sequence to Sequence Learning&#58; Fast Training and Inference with Gated Convolutions
     detail: Talk at Johns Hopkins University, Oct 2017.
     url: "talks/convs2s.pdf"
@@ -22,13 +27,148 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2019
+    title: "Depth-Adaptive Transformer"
+    authors: Maha Elbayad, Jiatao Gu, Edouard Grave, Michael Auli
+    doc-url: https://arxiv.org/pdf/1910.10073
+    img: depthadaptive
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1910.10073
+    code:
+    venue: conference
+    abstract: >
+      State of the art sequence-to-sequence models perform a fixed number of
+      computations for each input sequence regardless of whether it is easy or
+      hard to process. In this paper, we train Transformer models which can make
+      output predictions at different stages of the network and we investigate
+      different ways to predict how much computation is required for a
+      particular sequence. Unlike dynamic computation in Universal Transformers,
+      which applies the same set of layers iteratively, we apply different
+      layers at every step to adjust both the amount of computation as well as
+      the model capacity. Experiments on machine translation benchmarks show
+      that this approach can match the accuracy of a baseline Transformer while
+      using only half the number of decoder layers.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations"
+    authors: Alexei Baevski, Steffen Schneider, Michael Auli
+    doc-url: https://arxiv.org/pdf/1910.05453
+    img: vqw2v
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1910.05453
+    code:
+    venue: conference
+    abstract: >
+      We propose vq-wav2vec to learn discrete representations of audio segments
+      through a wav2vec-style self-supervised context prediction task. The
+      algorithm uses either a gumbel softmax or online k-means clustering to
+      quantize the dense representations. Discretization enables the direct
+      application of algorithms from the NLP community which require discrete
+      inputs. Experiments show that BERT pre-training achieves a new state of
+      the art on TIMIT phoneme classification and WSJ speech recognition.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "The Source-Target Domain Mismatch Problem in Machine Translation"
+    authors: Jiajun Shen, Peng-Jen Chen, Matt Le, Junxian He, Jiatao Gu, Myle Ott, Michael Auli, Marc'Aurelio Ranzato
+    doc-url: https://arxiv.org/pdf/1909.13151
+    img: srctgtmismatch
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1909.13151
+    code:
+    venue: conference
+    abstract: >
+      While we live in an increasingly interconnected world, different places
+      still exhibit strikingly different cultures and many events we experience
+      in our every day life pertain only to the specific place we live in. As a
+      result, people often talk about different things in different parts of the
+      world. In this work we study the effect of local context in machine
+      translation and postulate that particularly in low resource settings this
+      causes the domains of the source and target language to greatly mismatch,
+      as the two languages are often spoken in further apart regions of the
+      world with more distinctive cultural traits and unrelated local events. In
+      this work we first propose a controlled setting to carefully analyze the
+      source-target domain mismatch, and its dependence on the amount of
+      parallel and monolingual data. Second, we test both a model trained with
+      back-translation and one trained with self-training. The latter leverages
+      in-domain source monolingual data but uses potentially incorrect target
+      references. We found that these two approaches are often complementary to
+      each other. For instance, on a low-resource Nepali-English dataset the
+      combined approach improves upon the baseline using just parallel data by
+      2.5 BLEU points, and by 0.6 BLEU point when compared to back-translation.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "Simple and effective noisy channel modeling for neural machine translation"
+    authors: Kyra Yee, Nathan Ng, Yann N Dauphin, Michael Auli
+    doc-url: https://arxiv.org/pdf/1908.05731
+    img: noisychannel
+    booktitle: Proc. of EMNLP
+    booktitle-url: https://arxiv.org/abs/1908.05731
+    code: https://github.com/pytorch/fairseq/tree/master/examples/noisychannel
+    venue: conference
+    abstract: >
+      Previous work on neural noisy channel modeling relied on latent variable
+      models that incrementally process the source and target sentence. This
+      makes decoding decisions based on partial source prefixes even though the
+      full source is available. We pursue an alternative approach based on
+      standard sequence to sequence models which utilize the entire source.
+      These models perform remarkably well as channel models, even though they
+      have neither been trained on, nor designed to factor over incomplete
+      target sentences. Experiments with neural language models trained on
+      billions of words show that noisy channel models can outperform a direct
+      model by up to 3.2 BLEU on WMT'17 German-English translation. We evaluate
+      on four language-pairs and our channel models consistently outperform
+      strong alternatives such right-to-left reranking models and ensembles of
+      direct models.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "On The Evaluation of Machine Translation Systems Trained With Back-Translation"
+    authors: Sergey Edunov, Myle Ott, Marc'Aurelio Ranzato, Michael Auli
+    doc-url: https://arxiv.org/pdf/1908.05204
+    img: bteval
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/1908.05204
+    code:
+    venue: conference
+    abstract: >
+      Back-translation is a widely used data augmentation technique which
+      leverages target monolingual data. However, its effectiveness has been
+      challenged since automatic metrics such as BLEU only show significant
+      improvements for test examples where the source itself is a translation,
+      or translationese. This is believed to be due to translationese inputs
+      better matching the back-translated training data. In this work, we show
+      that this conjecture is not empirically supported and that
+      back-translation improves translation quality of both naturally occurring
+      text as well as translationese according to professional human
+      translators. We provide empirical evidence to support the view that
+      back-translation is preferred by humans because it produces more fluent
+      outputs. BLEU cannot capture human preferences because references are
+      translationese when source sentences are natural text. We recommend
+      complementing BLEU with a language model score to measure fluency.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
     title: "ELI5: Long Form Question Answering"
     authors: Angela Fan, Yacine Jernite, Ethan Perez, Jason Weston, Michael Auli
-    doc-url:
-    img: inpress
+    doc-url: https://arxiv.org/pdf/1907.09190
+    img: eli5
     booktitle: Proc. of ACL
-    booktitle-url:
+    booktitle-url: https://arxiv.org/abs/1907.09190
     code:
+    data: https://github.com/facebookresearch/ELI5
+    blog: https://ai.facebook.com/blog/longform-qa/
     venue: conference
     abstract: >
       We introduce the first large-scale corpus for long-form question
@@ -51,13 +191,42 @@ papers:
     paper-type: inproceedings
     selected: y
     year: 2019
+    title: "Facebook FAIR's WMT19 News Translation Task Submission"
+    authors: Nathan Ng, Kyra Yee, Alexei Baevski, Myle Ott, Michael Auli, Sergey Edunov
+    doc-url: https://arxiv.org/pdf/1907.06616
+    img: wmt19
+    booktitle: Proc. of WMT
+    booktitle-url: https://arxiv.org/abs/1907.06616
+    code: https://github.com/pytorch/fairseq/tree/master/examples/wmt19
+    blog: https://ai.facebook.com/blog/facebook-leads-wmt-translation-competition/
+    venue: conference
+    abstract: >
+      This paper describes Facebook FAIR's submission to the WMT19 shared news
+      translation task. We participate in two language pairs and four language
+      directions, English<-> German and English<-> Russian. Following our
+      submission from last year, our baseline systems are large BPE-based
+      transformer models trained with the Fairseq sequence modeling toolkit
+      which rely on sampled back-translations. This year we experiment with
+      different bitext data filtering schemes, as well as with adding filtered
+      back-translated data. We also ensemble and fine-tune our models on
+      domain-specific data, then decode using noisy channel model reranking. Our
+      submissions are ranked first in all four directions of the human
+      evaluation campaign. On En-> De, our system significantly outperforms
+      other systems as well as human translations. This system improves upon our
+      WMT'18 submission by 4.5 BLEU points.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
     title: "wav2vec: Unsupervised Pre-training for Speech Recognition"
     authors: Steffen Schneider, Alexei Baevski, Ronan Collobert, Michael Auli
     doc-url: https://arxiv.org/pdf/1904.05862
     img: wav2vec
-    booktitle: arXiv
+    booktitle: Proc. of Interspeech
     booktitle-url: https://arxiv.org/abs/1904.05862
-    code:
+    code: https://github.com/pytorch/fairseq/tree/master/examples/wav2vec
+    blog: https://ai.facebook.com/blog/wav2vec-state-of-the-art-speech-recognition-through-self-supervision/
     venue: conference
     abstract: >
       We explore unsupervised pre-training for speech recognition by
@@ -95,6 +264,31 @@ papers:
       and machines. We also support fast mixed-precision training
       and inference on modern GPUs. A demo video can be found
       here: https://www.youtube.com/watch?v=OtgDdWtHvto
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2019
+    title: "GLOSS: Generative Latent Optimization of Sentence Representations"
+    authors: Sidak Pal Singh, Angela Fan, Michael Auli
+    doc-url: https://arxiv.org/pdf/1907.06385
+    img: gloss
+    booktitle: Proc. of WMT
+    booktitle-url: https://arxiv.org/abs/1907.06385
+    code:
+    blog:
+    venue: conference
+    abstract: >
+      We propose a method to learn unsupervised sentence representations in a
+      non-compositional manner based on Generative Latent Optimization. Our
+      approach does not impose any assumptions on how words are to be combined
+      into a sentence representation. We discuss a simple Bag of Words model as
+      well as a variant that models word positions. Both are trained to
+      reconstruct the sentence based on a latent code and our model can be used to
+      generate text. Experiments show large improvements over the related
+      Paragraph Vectors. Compared to uSIF, we achieve a relative improvement of 5%
+      when trained on the same data and our method performs competitively to
+      Sent2vec while trained on 30 times less data.
   -
     layout: paper
     paper-type: inproceedings
@@ -545,6 +739,7 @@ papers:
     booktitle-url:
     venue: conference
     code: https://github.com/facebookresearch/fairseq
+    blog: https://engineering.fb.com/ml-applications/a-novel-approach-to-neural-machine-translation/
     abstract: >
       The prevalent approach to sequence to sequence learning maps
       an input sequence to a variable length output sequence via
@@ -1177,4 +1372,11 @@ papers:
     img: wmt2009
     venue: workshop
     abstract: >
-      Translation systems are complex, and most metrics do little to pinpoint causes of error or isolate system differences.  We use a simple technique to discover induction errors, which occur when good translations are absent from model search spaces.  Our results show that a common pruning heuristic drastically increases induction error, and also strongly suggest that the search spaces of phrase-based and hierarchical phrase-based models are highly overlapping despite the well known structural differences.
+      Translation systems are complex, and most metrics do little to pinpoint
+      causes of error or isolate system differences.  We use a simple technique
+      to discover induction errors, which occur when good translations are
+      absent from model search spaces.  Our results show that a common pruning
+      heuristic drastically increases induction error, and also strongly suggest
+      that the search spaces of phrase-based and hierarchical phrase-based
+      models are highly overlapping despite the well known structural
+      differences.
