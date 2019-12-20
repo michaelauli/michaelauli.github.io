@@ -35,12 +35,12 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2019
+    year: 2020
     title: "Depth-Adaptive Transformer"
     authors: Maha Elbayad, Jiatao Gu, Edouard Grave, Michael Auli
     doc-url: https://arxiv.org/pdf/1910.10073
     img: depthadaptive
-    booktitle: arXiv
+    booktitle: Proc. of ICLR
     booktitle-url: https://arxiv.org/abs/1910.10073
     code:
     venue: conference
@@ -60,12 +60,12 @@ papers:
     layout: paper
     paper-type: inproceedings
     selected: y
-    year: 2019
+    year: 2020
     title: "vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations"
     authors: Alexei Baevski, Steffen Schneider, Michael Auli
     doc-url: https://arxiv.org/pdf/1910.05453
     img: vqw2v
-    booktitle: arXiv
+    booktitle: Proc. of ICLR
     booktitle-url: https://arxiv.org/abs/1910.05453
     code:
     venue: conference
