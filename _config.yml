@@ -25,12 +25,135 @@ press:
   -
     title: Facebook details wav2vec, an AI algorithm that uses raw audio to improve speech recognition.
     detail: Venturebeat, 5 Nov 2019.
-    url: "https://venturebeat.com/2019/11/05/facebook-details-wav2vec-an-ai-algorithm-that-uses-raw-audio-to-improve-speech-recognition/"
+    url: https://venturebeat.com/2019/11/05/facebook-details-wav2vec-an-ai-algorithm-that-uses-raw-audio-to-improve-speech-recognition/
   -
     title: Facebook's new AI could lead to translations that actually make sense.
-    detail: Wired, 5 Sep 2018.
-    url: "https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/"
+    detail: Wired, 9 May 2017.
+    url: https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/
 papers:
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2020
+    title: "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations"
+    authors: Alexei Baevski, Henry Zhou, Abdelrahman Mohamed, Michael Auli
+    doc-url: https://arxiv.org/pdf/2006.11477
+    img: wav2vec2
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/2006.11477
+    code:
+    venue: conference
+    abstract: >
+      We show for the first time that learning powerful representations from
+      speech audio alone followed by fine-tuning on transcribed speech can
+      outperform the best semi-supervised methods while being conceptually
+      simpler. wav2vec 2.0 masks the speech input in the latent space and
+      solves a contrastive task defined over a quantization of the latent
+      representations which are jointly learned. We set a new state of the art
+      on both the 100 hour subset of Librispeech as well as on TIMIT phoneme
+      recognition. When lowering the amount of labeled data to one hour, our
+      model outperforms the previous state of the art on the 100 hour subset
+      while using 100 times less labeled data. Using just ten minutes of
+      labeled data and pre-training on 53k hours of unlabeled data still
+      achieves 5.7/10.1 WER on the noisy/clean test sets of Librispeech.
+      This demonstrates the feasibility of speech recognition with limited
+      amounts of labeled data. Fine-tuning on all of Librispeech achieves
+      1.9/3.5 WER using a simple baseline model architecture. We will release
+      code and models.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2020
+    title: "Unsupervised Cross-lingual Representation Learning for Speech Recognition"
+    authors: Alexis Conneau, Alexei Baevski, Ronan Collobert, Abdelrahman Mohamed, Michael Auli
+    doc-url: https://arxiv.org/pdf/2006.13979
+    img: xlsr
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/2006.13979
+    code:
+    venue: conference
+    abstract: >
+      This paper presents XLSR which learns cross-lingual speech representations
+      by pretraining a single model from the raw waveform of speech in multiple
+      languages. We build on a concurrently introduced self-supervised model
+      which is trained by solving a contrastive task over masked latent speech
+      representations and jointly learns a quantization of the latents shared
+      across languages. The resulting model is fine-tuned on labeled data and
+      experiments show that cross-lingual pretraining significantly outperforms
+      monolingual pretraining. On the CommonVoice benchmark, XLSR shows a
+      relative phoneme error rate reduction of 72% compared to the best known
+      results. On BABEL, our approach improves word error rate by 16% relative
+      compared to the strongest comparable system. Our approach enables a
+      single multilingual speech recognition model which is competitive to
+      strong individual models. Analysis shows that the latent discrete speech
+      representations are shared across languages with increased sharing for
+      related languages.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2020
+    title: "Robust and On-the-fly Dataset Denoising for Image Classification"
+    authors: Jiaming Song, Lunjia Hu, Yann Dauphin, Michael Auli, Tengyu Ma
+    doc-url: https://arxiv.org/pdf/2003.10647.pdf
+    img: odd
+    booktitle: Proc. of ECCV
+    booktitle-url: https://arxiv.org/abs/2003.10647
+    code:
+    venue: conference
+    abstract: >
+      Memorization in over-parameterized neural networks could severely hurt
+      generalization in the presence of mislabeled examples. However, mislabeled
+      examples are hard to avoid in extremely large datasets collected with weak
+      supervision. We address this problem by reasoning counterfactually about
+      the loss distribution of examples with uniform random labels had they were
+      trained with the real examples, and use this information to remove noisy
+      examples from the training set. First, we observe that examples with
+      uniform random labels have higher losses when trained with stochastic
+      gradient descent under large learning rates. Then, we propose to model
+      the loss distribution of the counterfactual examples using only the
+      network parameters, which is able to model such examples with remarkable
+      success. Finally, we propose to remove examples whose loss exceeds a
+      certain quantile of the modeled loss distribution. This leads to
+      On-the-fly Data Denoising (ODD), a simple yet effective algorithm that
+      is robust to mislabeled examples, while introducing almost zero
+      computational overhead compared to standard training. ODD is able to
+      achieve state-ofthe-art results on a wide range of datasets including
+      real-world ones such as WebVision and Clothing1M.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2020
+    title: "Effectiveness of self-supervised pre-training for speech recognition"
+    authors: Alexei Baevski, Michael Auli, Abdelrahman Mohamed
+    doc-url: https://arxiv.org/pdf/1911.03912
+    img: effectiveness
+    booktitle: Proc. of ICASSP
+    booktitle-url: https://arxiv.org/abs/1911.03912
+    code:
+    venue: conference
+    abstract: >
+      We compare self-supervised representation learning algorithms which
+      either explicitly quantize the audio data or learn representations
+      without quantization. We find the former to be more accurate since it
+      builds a good vocabulary of the data through vq-wav2vec to enable
+      learning of effective representations in subsequent BERT training.
+      Different to previous work, we directly fine-tune the pre-trained BERT
+      models on transcribed speech using a Connectionist Temporal
+      Classification (CTC) loss instead of feeding the representations into
+      a task-specific model. We also propose a BERT-style model learning
+      directly from the continuous audio data and compare pre-training on
+      raw audio to spectral features. Fine-tuning a BERT model on 10 hours
+      of labeled Librispeech data with a vq-wav2vec vocabulary is almost
+      as good as the best known reported system trained on 100 hours of
+      labeled data on test-clean, while achieving a 25% WER reduction on
+      test-other. When using only 10 minutes of labeled data, WER is 25.2
+      on test-other and 16.3 on test-clean. This demonstrates that
+      self-supervision can enable speech recognition systems trained
+      on a near-zero amount of transcribed data.
   -
     layout: paper
     paper-type: inproceedings
@@ -56,6 +179,34 @@ papers:
       the model capacity. Experiments on machine translation benchmarks show
       that this approach can match the accuracy of a baseline Transformer while
       using only half the number of decoder layers.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: y
+    year: 2020
+    title: "On The Evaluation of Machine Translation Systems Trained With Back-Translation"
+    authors: Sergey Edunov, Myle Ott, Marc'Aurelio Ranzato, Michael Auli
+    doc-url: https://arxiv.org/pdf/1908.05204
+    img: bteval
+    booktitle: Proc. of ACL
+    booktitle-url: https://arxiv.org/abs/1908.05204
+    code:
+    venue: conference
+    abstract: >
+      Back-translation is a widely used data augmentation technique which
+      leverages target monolingual data. However, its effectiveness has been
+      challenged since automatic metrics such as BLEU only show significant
+      improvements for test examples where the source itself is a translation,
+      or translationese. This is believed to be due to translationese inputs
+      better matching the back-translated training data. In this work, we show
+      that this conjecture is not empirically supported and that
+      back-translation improves translation quality of both naturally occurring
+      text as well as translationese according to professional human
+      translators. We provide empirical evidence to support the view that
+      back-translation is preferred by humans because it produces more fluent
+      outputs. BLEU cannot capture human preferences because references are
+      translationese when source sentences are natural text. We recommend
+      complementing BLEU with a language model score to measure fluency.
   -
     layout: paper
     paper-type: inproceedings
@@ -136,34 +287,6 @@ papers:
       on four language-pairs and our channel models consistently outperform
       strong alternatives such right-to-left reranking models and ensembles of
       direct models.
-  -
-    layout: paper
-    paper-type: inproceedings
-    selected: y
-    year: 2019
-    title: "On The Evaluation of Machine Translation Systems Trained With Back-Translation"
-    authors: Sergey Edunov, Myle Ott, Marc'Aurelio Ranzato, Michael Auli
-    doc-url: https://arxiv.org/pdf/1908.05204
-    img: bteval
-    booktitle: arXiv
-    booktitle-url: https://arxiv.org/abs/1908.05204
-    code:
-    venue: conference
-    abstract: >
-      Back-translation is a widely used data augmentation technique which
-      leverages target monolingual data. However, its effectiveness has been
-      challenged since automatic metrics such as BLEU only show significant
-      improvements for test examples where the source itself is a translation,
-      or translationese. This is believed to be due to translationese inputs
-      better matching the back-translated training data. In this work, we show
-      that this conjecture is not empirically supported and that
-      back-translation improves translation quality of both naturally occurring
-      text as well as translationese according to professional human
-      translators. We provide empirical evidence to support the view that
-      back-translation is preferred by humans because it produces more fluent
-      outputs. BLEU cannot capture human preferences because references are
-      translationese when source sentences are natural text. We recommend
-      complementing BLEU with a language model score to measure fluency.
   -
     layout: paper
     paper-type: inproceedings
@@ -395,7 +518,7 @@ papers:
     title: Modeling Human Motion with Quaternion-based Neural Networks
     doc-url: https://arxiv.org/pdf/1901.07677
     img: quaternet
-    booktitle: arXiv
+    booktitle: IJCV
     booktitle-url: https://arxiv.org/abs/1901.07677
     venue: conference
     abstract: >
