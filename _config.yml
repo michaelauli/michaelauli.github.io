@@ -2,6 +2,11 @@ exclude: ['README.md']
 timezone: US/Pacific
 talks:
   -
+    title: wav2vec&#58; Self-supervised learning of speech representations
+    detail: Talk at MIT, CMU, U of Edinburgh, Spring 2021.
+    url: "talks/wav2vec-ssl.pdf"
+    img: "wav2vec-ssl.png"
+  -
     title: Efficient Sequence Modeling
     detail: Talk at WNGT'19, Stanford, Berkeley, Nov 2019.
     url: "talks/efficient-seq-modeling.pdf"
