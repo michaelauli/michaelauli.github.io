@@ -71,14 +71,14 @@
     {% if include.paper.slides %}
       <a href="{{ include.paper.slides }}" class="label label-info">Slides</a>
     {% endif %}
-    {% if include.paper.code %}
-      <a href="{{ include.paper.code }}" class="label label-success">Code</a>
-    {% endif %}
     {% if include.paper.data %}
       <a href="{{ include.paper.data }}" class="label label-warning">Data</a>
     {% endif %}
     {% if include.paper.blog %}
       <a href="{{ include.paper.blog }}" class="label label-danger">Blog</a>
+    {% endif %}
+    {% if include.paper.code %}
+      <a href="{{ include.paper.code }}" class="label label-success">Code</a>
     {% endif %}
 
   </div>

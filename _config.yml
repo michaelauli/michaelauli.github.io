@@ -28,6 +28,18 @@ talks:
     img: "parsing-tagging-talk.jpg"
 press:
   -
+    title: Facebook AI cuts by more than half the error rate of unsupervised speech recognition
+    detail: ZDNet, 21 May 2021.
+    url: https://www.zdnet.com/article/facebook-ai-cuts-by-more-than-half-error-rate-of-unsupervised-speech-recognition/
+  -
+    title: Facebook Wav2vec-U learns to recognize speech from unlabeled data
+    detail: Venturebeat, 21 May 2021.
+    url: https://venturebeat.com/2021/05/21/facebook-wav2vec-u-learns-to-recognize-speech-from-unlabeled-data/
+  -
+    title: Facebook claims wav2vec 2.0 tops speech recognition performance with 10 minutes of labeled data
+    detail: Venturebeat, 23 June 2020.
+    url: https://venturebeat.com/2020/06/23/facebook-claims-wav2vec-2-0-tops-speech-recognition-performance-with-10-minutes-of-labeled-data/
+  -
     title: Facebook details wav2vec, an AI algorithm that uses raw audio to improve speech recognition.
     detail: Venturebeat, 5 Nov 2019.
     url: https://venturebeat.com/2019/11/05/facebook-details-wav2vec-an-ai-algorithm-that-uses-raw-audio-to-improve-speech-recognition/
@@ -39,15 +51,82 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
+    year: 2021
+    title: "Unsupervised Speech Recognition"
+    authors: Alexei Baevski, Wei-Ning Hsu, Alexis Conneau, Michael Auli
+    doc-url: https://arxiv.org/pdf/2105.11084
+    img: w2vu
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/2105.11084
+    code: https://github.com/pytorch/fairseq/tree/master/examples/wav2vec/unsupervised
+    blog: https://ai.facebook.com/blog/wav2vec-unsupervised-speech-recognition-without-supervision/
+    venue: conference
+    abstract: >
+      Despite rapid progress in the recent past, current speech
+      recognition systems still require labeled training data which
+      limits this technology to a small fraction of the languages
+      spoken around the globe. This paper describes wav2vec-U, short
+      for wav2vec Unsupervised, a method to train speech recognition
+      models without any labeled data. We leverage self-supervised
+      speech representations to segment unlabeled audio and learn a
+      mapping from these representations to phonemes via adversarial
+      training. The right representations are key to the success of our
+      method. Compared to the best previous unsupervised work,
+      wav2vec-U reduces the phoneme error rate on the TIMIT benchmark
+      from 26.1 to 11.3. On the larger English Librispeech benchmark,
+      wav2vec-U achieves a word error rate of 5.9 on test-other,
+      rivaling some of the best published systems trained on 960 hours
+      of labeled data from only two years ago. We also experiment on
+      nine other languages, including low-resource languages such as
+      Kyrgyz, Swahili and Tatar.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: true
+    year: 2020
+    title: "Beyond english-centric multilingual machine translation"
+    authors: Angela Fan, Shruti Bhosale, Holger Schwenk, Zhiyi Ma, Ahmed El-Kishky, Siddharth Goyal, Mandeep Baines, Onur Celebi, Guillaume Wenzek, Vishrav Chaudhary, Naman Goyal, Tom Birch, Vitaliy Liptchinsky, Sergey Edunov, Edouard Grave, Michael Auli*, Armand Joulin*
+    doc-url: https://arxiv.org/pdf/2010.11125
+    img: m2m100
+    booktitle: JMLR
+    booktitle-url: https://arxiv.org/abs/2010.11125
+    code: https://github.com/pytorch/fairseq/tree/master/examples/m2m_100
+    blog: https://ai.facebook.com/blog/introducing-many-to-many-multilingual-machine-translation/
+    venue: journal
+    abstract: >
+      Existing work in translation demonstrated the potential of
+      massively multilingual machine translation by training a single
+      model able to translate between any pair of languages. However,
+      much of this work is English-Centric by training only on data
+      which was translated from or to English. While this is supported
+      by large sources of training data, it does not reflect
+      translation needs worldwide. In this work, we create a true
+      Many-to-Many multilingual translation model that can translate
+      directly between any pair of 100 languages. We build and open
+      source a training dataset that covers thousands of language
+      directions with supervised data, created through large-scale
+      mining. Then, we explore how to effectively increase model
+      capacity through a combination of dense scaling and
+      language-specific sparse parameters to create high quality
+      models. Our focus on non-English-Centric models brings gains of
+      more than 10 BLEU when directly translating between non-English
+      directions while performing competitively to the best single
+      systems of WMT. We open-source our scripts so that others may
+      reproduce the data, evaluation, and final M2M-100 model.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: true
     year: 2020
     title: "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations"
     authors: Alexei Baevski, Henry Zhou, Abdelrahman Mohamed, Michael Auli
     doc-url: https://arxiv.org/pdf/2006.11477
     img: wav2vec2
-    booktitle: arXiv
+    booktitle: NeurIPS
     booktitle-url: https://arxiv.org/abs/2006.11477
-    code:
+    code: https://github.com/pytorch/fairseq/tree/master/examples/wav2vec
+    blog: https://ai.facebook.com/blog/wav2vec-20-learning-the-structure-of-speech-from-raw-audio/
     venue: conference
     abstract: >
       We show for the first time that learning powerful representations from
@@ -69,13 +148,13 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
-    year: 2020
+    selected: false
+    year: 2021
     title: "Unsupervised Cross-lingual Representation Learning for Speech Recognition"
     authors: Alexis Conneau, Alexei Baevski, Ronan Collobert, Abdelrahman Mohamed, Michael Auli
     doc-url: https://arxiv.org/pdf/2006.13979
     img: xlsr
-    booktitle: arXiv
+    booktitle: Interspeech
     booktitle-url: https://arxiv.org/abs/2006.13979
     code:
     venue: conference
@@ -98,7 +177,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2020
     title: "Robust and On-the-fly Dataset Denoising for Image Classification"
     authors: Jiaming Song, Lunjia Hu, Yann Dauphin, Michael Auli, Tengyu Ma
@@ -130,7 +209,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2020
     title: "Effectiveness of self-supervised pre-training for speech recognition"
     authors: Alexei Baevski, Michael Auli, Abdelrahman Mohamed
@@ -162,7 +241,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2020
     title: "Depth-Adaptive Transformer"
     authors: Maha Elbayad, Jiatao Gu, Edouard Grave, Michael Auli
@@ -187,7 +266,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2020
     title: "On The Evaluation of Machine Translation Systems Trained With Back-Translation"
     authors: Sergey Edunov, Myle Ott, Marc'Aurelio Ranzato, Michael Auli
@@ -215,7 +294,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2020
     title: "vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations"
     authors: Alexei Baevski, Steffen Schneider, Michael Auli
@@ -236,7 +315,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "The Source-Target Domain Mismatch Problem in Machine Translation"
     authors: Jiajun Shen, Peng-Jen Chen, Matt Le, Junxian He, Jiatao Gu, Myle Ott, Michael Auli, Marc'Aurelio Ranzato
@@ -268,7 +347,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "Simple and effective noisy channel modeling for neural machine translation"
     authors: Kyra Yee, Nathan Ng, Yann N Dauphin, Michael Auli
@@ -295,7 +374,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "ELI5: Long Form Question Answering"
     authors: Angela Fan, Yacine Jernite, Ethan Perez, Jason Weston, Michael Auli
@@ -326,7 +405,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "Facebook FAIR's WMT19 News Translation Task Submission"
     authors: Nathan Ng, Kyra Yee, Alexei Baevski, Myle Ott, Michael Auli, Sergey Edunov
@@ -354,7 +433,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
     year: 2019
     title: "wav2vec: Unsupervised Pre-training for Speech Recognition"
     authors: Steffen Schneider, Alexei Baevski, Ronan Collobert, Michael Auli
@@ -382,7 +461,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
     year: 2019
     title: "fairseq: A fast, extensible toolkit for sequence modeling"
     authors: Myle Ott, Sergey Edunov, Alexei Baevski, Angela Fan, Sam Gross, Nathan Ng, David Grangier, Michael Auli
@@ -404,7 +483,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "GLOSS: Generative Latent Optimization of Sentence Representations"
     authors: Sidak Pal Singh, Angela Fan, Michael Auli
@@ -429,7 +508,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "Pre-trained Language Model Representations for Language Generation"
     authors: Sergey Edunov, Alexei Baevski, Michael Auli
@@ -457,7 +536,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "Cloze-driven Pretraining of Self-attention Networks"
     authors: Alexei Baevski, Sergey Edunov, Yinhan Liu, Luke Zettlemoyer, Michael Auli
@@ -483,7 +562,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     title: "Mixture Models for Diverse Machine Translation: Tricks of the Trade"
     authors: Tianxiao Shen, Myle Ott, Michael Auli, Marc'Aurelio Ranzato
@@ -517,7 +596,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     authors: Dario Pavllo, Christoph Feichtenhofer, Michael Auli, David Grangier
     title: Modeling Human Motion with Quaternion-based Neural Networks
@@ -585,7 +664,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     authors: Emily Dinan, Stephen Roller, Kurt Shuster, Angela Fan, Michael Auli, Jason Weston
     title: 'Wizard of Wikipedia: Knowledge-Powered Conversational agents'
@@ -618,7 +697,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2019
     authors: Alexei Baevski, Michael Auli
     title: Adaptive Input Representations for Neural Language Modeling
@@ -647,7 +726,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: Dario Pavllo, Christoph Feichtenhofer, David Grangier, Michael Auli
     title: 3D human pose estimation in video with temporal convolutions and semi-supervised training
@@ -679,7 +758,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
     year: 2018
     authors: Sergey Edunov, Myle Ott, David Grangier, Michael Auli
     title: Understanding Back-Translation at Scale
@@ -708,7 +787,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: Myle Ott, Sergey Edunov, David Grangier, Michael Auli
     title: Scaling Neural Machine Translation
@@ -733,7 +812,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: Dario Pavllo, David Grangier, Michael Auli
     title: 'QuaterNet: A Quaternion-based Recurrent Model for Human Motion'
@@ -761,7 +840,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
     title: Analyzing Uncertainty in Neural Machine Translation
@@ -792,7 +871,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: Sergey Edunov, Myle Ott, Michael Auli, David Grangier, Marc'Aurelio Ranzato
     title: Classical Structured Prediction Losses for Sequence to Sequence Learning
@@ -816,7 +895,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2017
     authors: Angela Fan, David Grangier, Michael Auli
     title: Controllable Abstractive Summarization
@@ -839,7 +918,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2018
     authors: David Grangier, Michael Auli
     title: QuickEdit&#58; Editing Text &amp; Translations via Simple Delete Actions
@@ -866,7 +945,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
     year: 2017
     authors: Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin
     title: Convolutional Sequence to Sequence Learning
@@ -894,7 +973,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2017
     authors: Yann N. Dauphin, Angela Fan, Michael Auli and David Grangier
     title: Language Modeling with Gated Convolutional Networks
@@ -923,7 +1002,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2017
     authors: Jonas Gehring, Michael Auli, David Grangier, Yann N. Dauphin
     title: A Convolutional Encoder Model for Neural Machine Translation
@@ -951,7 +1030,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Roman Novak, Michael Auli, David Grangier
     title: Iterative Refinement for Machine Translation
@@ -978,7 +1057,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Gurvan L'Hostis, David Grangier, Michael Auli
     title: Vocabulary Selection Strategies for Neural Machine Translation
@@ -1007,7 +1086,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Remi Lebret, David Grangier, and Michael Auli
     title: Neural Text Generation from Structured Data with Application to the Biography Domain
@@ -1038,7 +1117,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Joel Legrand, Michael Auli, and Ronan Collobert
     title: Neural Network-based Word Alignment through Score Aggregation
@@ -1064,7 +1143,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Wenlin Chen, David Grangier, Michael Auli
     title: Strategies for Training Large Vocabulary Neural Language Models
@@ -1090,7 +1169,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Wenduan Xu, Michael Auli, and Stephen Clark
     title: Expected F-Measure Training for Shift-Reduce Parsing with Recurrent Neural Networks
@@ -1109,7 +1188,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2016
     authors: Sumit Chopra, Michael Auli, and Alexander M. Rush
     title: Abstractive Sentence Summarization with Attentive Recurrent Neural Networks
@@ -1137,7 +1216,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: true
     year: 2016
     authors: Marc'Aurelio Ranzato, Sumit Chopra, Michael Auli, and Wojciech Zaremba
     title: Sequence Level Training with Recurrent Neural Networks
@@ -1167,7 +1246,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2015
     authors: Wenduan Xu, Michael Auli, and Stephen Clark
     title: CCG Supertagging with a Recurrent Neural Network
@@ -1190,7 +1269,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2015
     authors: Michel Galley, Chris Brockett, Alessandro Sordoni, Yangfeng Ji, Michael Auli, Chris Quirk, Margaret Mitchell, Jianfeng Gao and Bill Dolan
     title: deltaBLEU&#58; A Discriminative Metric for Generation Tasks with Intrinsically Diverse Targets
@@ -1212,7 +1291,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2015
     authors: Kai Zhao, Hany Hassan, and Michael Auli
     title: Learning Translation Models from Monolingual Continuous Representations
@@ -1243,7 +1322,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2015
     authors: Alessandro Sordoni, Michel Galley, Michael Auli, Chris Brockett, Yangfeng Ji, Meg Mitchell, Jianfeng Gao, Bill Dolan, and Jian-Yun Nie
     title: A Neural Network Approach to Context-Sensitive Generation of Conversational Responses
@@ -1266,7 +1345,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2014
     authors: Michael Auli, Michel Galley, and Jianfeng Gao
     title: Large Scale Expected BLEU Training of Phrase-based Reordering Models
@@ -1293,7 +1372,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2014
     authors: Michael Auli and Jianfeng Gao
     title: Decoder Integration and Expected BLEU Training for Recurrent Neural Network Language Models
@@ -1317,7 +1396,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2014
     authors: Yuening Hu, Michael Auli, Qin Gao, and Jianfeng Gao
     title: Minimum Translation Modeling with Recurrent Neural Networks
@@ -1340,7 +1419,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2013
     authors: Michael Auli, Michel Galley, Chris Quirk, and Geoffrey Zweig
     title: Joint Language and Translation Modeling with Recurrent Neural Networks
@@ -1366,7 +1445,7 @@ papers:
   -
     layout: paper
     paper-type: phd-thesis
-    selected: y
+    selected: false
     year: 2012
     title: Integrated Supertagging and Parsing
     institution: University of Edinburgh
@@ -1385,7 +1464,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2011
     authors: Michael Auli and Adam Lopez
     title: Training a Log-Linear Parser with Loss Functions via Softmax-Margin
@@ -1412,7 +1491,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2011
     authors: Michael Auli and Adam Lopez
     title: A Comparison of Loopy Belief Propagation and Dual Decomposition for Integrated CCG Supertagging and Parsing
@@ -1437,7 +1516,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2011
     authors: Michael Auli and Adam Lopez
     title: Efficient CCG Parsing&#58; A* versus Adaptive Supertagging
@@ -1461,7 +1540,7 @@ papers:
   -
     layout: paper
     paper-type: firstyearreport
-    selected: y
+    selected: false
     year: 2009
     institution: University of Edinburgh
     title: CCG-based Models for Statistical Machine Translation
@@ -1499,7 +1578,7 @@ papers:
   -
     layout: paper
     paper-type: inproceedings
-    selected: y
+    selected: false
     year: 2009
     authors: Michael Auli, Adam Lopez, Hieu Hoang, and Philipp Koehn
     title: A Systematic Analysis of Translation Model Search Spaces
