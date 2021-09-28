@@ -57,7 +57,7 @@ papers:
     authors: Alexei Baevski, Wei-Ning Hsu, Alexis Conneau, Michael Auli
     doc-url: https://arxiv.org/pdf/2105.11084
     img: w2vu
-    booktitle: arXiv
+    booktitle: Proc. of NeurIPS
     booktitle-url: https://arxiv.org/abs/2105.11084
     code: https://github.com/pytorch/fairseq/tree/master/examples/wav2vec/unsupervised
     blog: https://ai.facebook.com/blog/wav2vec-unsupervised-speech-recognition-without-supervision/
