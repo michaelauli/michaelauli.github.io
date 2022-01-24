@@ -28,6 +28,14 @@ talks:
     img: "parsing-tagging-talk.jpg"
 press:
   -
+    title: Meta researchers build an AI that learns equally well from visual, written or spoken materials
+    detail: TechCrunch, 20 Jan 2022.
+    url: https://techcrunch.com/2022/01/20/meta-researchers-build-an-ai-that-learns-equally-well-from-visual-written-or-spoken-materials
+  -
+    title: Meta’s new learning algorithm can teach AI to multi-task
+    detail: MIT Technology Review, 20 Jan 2022.
+    url: https://www.technologyreview.com/2022/01/20/1043885/meta-ai-facebook-learning-algorithm-nlp-vision-speech-agi/
+  -
     title: Facebook AI cuts by more than half the error rate of unsupervised speech recognition
     detail: ZDNet, 21 May 2021.
     url: https://www.zdnet.com/article/facebook-ai-cuts-by-more-than-half-error-rate-of-unsupervised-speech-recognition/
@@ -48,6 +56,71 @@ press:
     detail: Wired, 9 May 2017.
     url: https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/
 papers:
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: true
+    year: 2022
+    title: "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language"
+    authors: Alexei Baevski, Wei-Ning Hsu, Qiantong Xu, Arun Babu, Jiatao Gu, Michael Auli.
+    doc-url: https://ai.facebook.com/research/data2vec-a-general-framework-for-self-supervised-learning-in-speech-vision-and-language
+    img: data2vec
+    booktitle: arXiv
+    booktitle-url: https://ai.facebook.com/research/data2vec-a-general-framework-for-self-supervised-learning-in-speech-vision-and-language
+    code: https://github.com/pytorch/fairseq/tree/master/examples/data2vec/
+    blog: https://ai.facebook.com/blog/the-first-high-performance-self-supervised-algorithm-that-works-for-speech-vision-and-text
+    venue: conference
+    abstract: >
+      While the general idea of self-supervised learning is identical
+      across modalities, the actual algorithms and objectives differ
+      widely because they were developed with a single modality in mind.
+      To get us closer to general self-supervised learning, we present
+      data2vec, a framework that uses the same learning method for
+      either speech,NLP or computer vision. The core idea is to
+      predict latent representations of the full input data based on
+      a masked view of the input in a selfdistillation setup using a
+      standard Transformer architecture. Instead of predicting
+      modality-specific targets such as words, visual tokens or units
+      of human speech which are local in nature, data2vec predicts
+      contextualized latent representations that contain information
+      from the entire input. Experiments on the major benchmarks of
+      speech recognition, image classification, and natural language
+      understanding demonstrate a new state of the art or competitive
+      performance to predominant approaches.
+  -
+    layout: paper
+    paper-type: inproceedings
+    selected: true
+    year: 2021
+    title: "XLS-R: Self-supervised Cross-lingual Speech Representation Learning at Scale"
+    authors: Arun Babu, Changhan Wang, Andros Tjandra, Kushal Lakhotia, Qiantong Xu, Naman Goyal, Kritika Singh, Patrick von Platen, Yatharth Saraf, Juan Pino, Alexei Baevski, Alexis Conneau, Michael Auli
+    doc-url: https://arxiv.org/pdf/2111.09296.pdf
+    img: xlsr2
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/2111.09296
+    code: https://github.com/pytorch/fairseq/tree/master/examples/wav2vec/
+    blog: https://ai.facebook.com/blog/xls-r-self-supervised-speech-processing-for-128-languages
+    venue: conference
+    abstract: >
+      This paper presents XLS-R, a large-scale model for cross-lingual
+      speech representation learning based on wav2vec 2.0. We train
+      models with up to 2B parameters on nearly half a million hours
+      of publicly available speech audio in 128 languages, an order
+      of magnitude more public data than the largest known prior work.
+      Our evaluation covers a wide range of tasks, domains, data
+      regimes and languages, both high and low-resource. On the
+      CoVoST-2 speech translation benchmark, we improve the previous
+      state of the art by an average of 7.4 BLEU over 21 translation
+      directions into English. For speech recognition, XLS-R improves
+      over the best known prior work on BABEL, MLS, CommonVoice as
+      well as VoxPopuli, lowering error rates by 14-34% relative on
+      average. XLS-R also sets a new state of the art on VoxLingua107
+      language identification. Moreover, we show that with sufficient
+      model size, cross-lingual pretraining can outperform
+      English-only pretraining when translating English speech into
+      other languages, a setting which favors monolingual pretraining.
+      We hope XLS-R can help to improve speech processing tasks for
+      many more languages of the world.
   -
     layout: paper
     paper-type: inproceedings
