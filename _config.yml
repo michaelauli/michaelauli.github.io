@@ -62,7 +62,10 @@ press:
     url: https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/
 papers:
   -
-    layout: paper paper-type: inproceedings selected: true year: 2022
+    layout: paper 
+    paper-type: inproceedings 
+    selected: true 
+    year: 2022
     title: "Efficient Self-supervised Learning with Contextualized Target Representations for Vision, Speech and Language"
     authors: Alexei Baevski, Arun Babu, Wei-Ning Hsu, Michael Auli.
     doc-url: https://arxiv.org/pdf/2212.07525.pdf
