@@ -2,6 +2,11 @@ exclude: ['README.md']
 timezone: US/Pacific
 talks:
   -
+    title: Unified self-supervised learning for speech, vision and NLP
+    detail: Talk at ECCV Workshop on Perception
+    url: "talks/data2vec.pdf"
+    img: "data2vec.png"   
+  -
     title: wav2vec&#58; Self-supervised learning of speech representations
     detail: Talk at MIT, CMU, U of Edinburgh, Spring 2021.
     url: "talks/wav2vec-ssl.pdf"
