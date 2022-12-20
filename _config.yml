@@ -62,16 +62,44 @@ press:
     url: https://www.wired.com/2017/05/facebook-open-sources-neural-networks-speed-translations/
 papers:
   -
+    layout: paper paper-type: inproceedings selected: true year: 2022
+    title: "Efficient Self-supervised Learning with Contextualized Target Representations for Vision, Speech and Language"
+    authors: Alexei Baevski, Arun Babu, Wei-Ning Hsu, Michael Auli.
+    doc-url: https://arxiv.org/pdf/2212.07525.pdf
+    img: data2vec2
+    booktitle: arXiv
+    booktitle-url: https://arxiv.org/abs/2212.07525
+    code: https://github.com/pytorch/fairseq/tree/master/examples/data2vec/
+    blog: https://ai.facebook.com/blog/ai-self-supervised-learning-data2vec/
+    venue: conference
+    abstract: >
+      Current self-supervised learning
+      algorithms are often modality-specific and require large amounts of
+      computational resources. To address these issues, we increase the
+      training efficiency of data2vec, a learning objective that
+      generalizes across several modalities. We do not encode masked
+      tokens, use a fast convolutional decoder and amortize the effort to
+      build teacher representations. data2vec 2.0 benefits from the rich
+      contextualized target representations introduced in data2vec which
+      enable a fast self-supervised learner. Experiments on ImageNet-1K
+      image classification show that data2vec 2.0 matches the accuracy of
+      Masked Autoencoders in 16.4x lower pre-training time, on
+      Librispeech speech recognition it performs as well as wav2vec 2.0
+      in 10.6x less time, and on GLUE natural language understanding it
+      matches a retrained RoBERTa model in half the time. Trading some
+      speed for accuracy results in ImageNet-1K top-1 accuracy of 86.8\%
+      with a ViT-L model trained for 150 epochs.
+  -
     layout: paper
     paper-type: inproceedings
     selected: true
     year: 2022
     title: "data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language"
     authors: Alexei Baevski, Wei-Ning Hsu, Qiantong Xu, Arun Babu, Jiatao Gu, Michael Auli.
-    doc-url: https://ai.facebook.com/research/data2vec-a-general-framework-for-self-supervised-learning-in-speech-vision-and-language
+    doc-url: https://arxiv.org/pdf/2202.03555.pdf
     img: data2vec
     booktitle: arXiv
-    booktitle-url: https://ai.facebook.com/research/data2vec-a-general-framework-for-self-supervised-learning-in-speech-vision-and-language
+    booktitle-url: https://arxiv.org/abs/2202.03555
     code: https://github.com/pytorch/fairseq/tree/master/examples/data2vec/
     blog: https://ai.facebook.com/blog/the-first-high-performance-self-supervised-algorithm-that-works-for-speech-vision-and-text
     venue: conference
