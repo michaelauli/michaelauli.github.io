@@ -65,16 +65,16 @@ papers:
     layout: paper 
     paper-type: inproceedings 
     selected: true 
-    year: 2023
+    year: 2024
     title: "Scaling Speech Technology to 1,000+ Languages"
     authors: Vineel Pratap, Andros Tjandra, Bowen Shi, Paden Tomasello, Arun Babu, Sayani Kundu, Ali Elkahky, Zhaoheng Ni, Apoorv Vyas, Maryam Fazel-Zarandi, Alexei Baevski, Yossi Adi, Xiaohui Zhang, Wei-Ning Hsu, Alexis Conneau, Michael Auli
     doc-url: http://arxiv.org/pdf/2305.13516.pdf
     img: mms
-    booktitle: arXiv
+    booktitle: JMLR
     booktitle-url: http://arxiv.org/abs/2305.13516
     code: https://github.com/pytorch/fairseq/tree/master/examples/mms
     blog: https://ai.facebook.com/blog/multilingual-model-speech-recognition/
-    venue: conference
+    venue: journal
     abstract: >
       Expanding the language coverage of speech technology has the
       potential to improve access to information for many more people.
